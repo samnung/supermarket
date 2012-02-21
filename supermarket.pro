@@ -1,53 +1,88 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2010-11-20T23:04:33
+# Projekt Supermarket, kalkulacka pro Supermarket
+# fondu od spolecnosti Pioneer Investments.
 #
 #-------------------------------------------------
 
 QT		+= core gui network
 
 TARGET		= Supermarket
+
 TEMPLATE	= app
 
 HEADERS += \
-		src/splashscreen.h \
-		src/seznam.h \
-		src/prehled.h \
-		src/podrobnosti.h \
-		src/oaplikaci.h \
-		src/mainwindow.h \
-		src/podrobnosti_adv.h \
-		src/window_control.h \
-		src/files_control.h \
-		src/define.h \
-		src/MyQToolButton.h \
-		src/MyQMainWindow.h \
-		src/cenik.h
+	splashscreen.h \
+	seznam.h \
+	prehled.h \
+	podrobnosti.h \
+	oaplikaci.h \
+	mainwindow.h \
+	podrobnosti_adv.h \
+	window_control.h \
+	files_control.h \
+	define.h \
+	MyQToolButton.h \
+	MyQMainWindow.h \
+	cenik.h
 
 SOURCES	+= \
-		src/splashscreen.cpp \
-		src/seznam.cpp \
-		src/prehled.cpp \
-		src/podrobnosti.cpp \
-		src/oaplikaci.cpp \
-		src/mainwindow.cpp \
-		src/main.cpp \
-		src/podrobnosti_adv.cpp \
-		src/window_control.cpp \
-		src/files_control.cpp \
-		src/cenik.cpp
+	splashscreen.cpp \
+	seznam.cpp \
+	prehled.cpp \
+	podrobnosti.cpp \
+	oaplikaci.cpp \
+	mainwindow.cpp \
+	main.cpp \
+	podrobnosti_adv.cpp \
+	window_control.cpp \
+	files_control.cpp \
+	cenik.cpp
 
 FORMS	+= \
-		src/prehled.ui \
-		src/mainwindow.ui
+	prehled.ui \
+	mainwindow.ui
 
-RESOURCES	+=
+debug {
+	CONFIG += console
+}
+
+# build path
+DESTDIR = $${PWD}/../build
+
+# path to sources
+SRCS = $${PWD}
+
+# path to icons from sources
+ICONS_PATH = "$${SRCS}/img/*.*"
+
 
 macx {
+	# set program icon
 	ICON = img/icon.icns
-}
-win32 {
-	RC_FILE += img/ico/icon.rc
+
+	# set bundle info
+	QMAKE_INFO_PLIST = Info.plist
+
+	# set path to Resources of bundle
+	RESOURCES_PATH = $${DESTDIR}/Supermarket.app/Contents/Resources/
+
+	# command to copy icons
+	copyfiles.commands += "cp $${ICONS_PATH} $${RESOURCES_PATH}"
 }
 
-OTHER_FILES +=
+win32 {
+	# set rc file for program icon
+	RC_FILE += img/ico/icon.rc
+
+	# set path to icons folder
+	RESOURCE_PATH = $${DESTDIR}/img/
+
+	# command to copy icons
+	copyfiles.commands = @call copy $${ICONS_PATH} $${RESOURCE_PATH}
+}
+
+# commands for copy files
+QMAKE_EXTRA_TARGETS += copyfiles
+POST_TARGETDEPS += copyfiles
+
