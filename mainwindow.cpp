@@ -26,11 +26,6 @@ MainWindow::MainWindow(files_control *files, int _window_number) : /*QMainWindow
 	ui->skutecny_label->hide();
 	ui->procento->hide();
 
-
-
-
-
-
 	ui->poplatek_line->setText("0,00");
 
 	//********** doplnovani comboboxu ************
