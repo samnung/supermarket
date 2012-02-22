@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <version type="application">000100</version>
+    <version type="database_png">20101231</version>
+    <version type="database_xml">20110429</version>
+    
+    <img type="splash" place="resources">splash.png</img>
+    <img type="app_icon" place="resources">icon.png</img>
+    <img type="info_icon" place="resources">info.png</img>
+    
+    <name type="database" place="home">database.xml</name>
+    <name type="mix" id="1" place="home">Mix1_2010-12_1.png</name>
+    <name type="mix" id="2" place="home">Mix2_2010-12_1.png</name>
+    <name type="mix" id="3" place="home">Mix3_2010-12_1.png</name>
+    <name type="mix" id="4" place="home">Mix4_2010-12_1.png</name>
+    <name type="mix" id="5" place="home">Mix5_2010-12_1.png</name>
+    <name type="mix" id="6" place="home">Mix6_2010-12_1.png</name>
+    <name type="mix" id="7" place="home">Mix7_2010-12_1.png</name>
+    <name type="mix" id="8" place="home">Mix8_2010-12_1.png</name>
+    <name type="mix" id="9" place="home">Mix9_2010-12_1.png</name>
+    <name type="mix" id="10" place="home">Mix10_2010-12_1.png</name>
+    <name type="mix" id="11" place="home">Mix11_2010-12_1.png</name>
+    <name type="mix" id="12" place="home">Mix12_2010-12_1.png</name>
+    <name type="mix" id="13" place="home">Mix13_2010-12_1.png</name>
+</database>
