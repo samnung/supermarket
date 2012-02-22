@@ -73,19 +73,8 @@
 #include <QtGui/QMenu>
 #include <QtGui/QAction>
 #include <QShortcut>
-#include <QtNetwork/QNetworkRequest>
-#include <QtNetwork/QNetworkAccessManager>
-#include <QtNetwork/QNetworkReply>
 
-#include <curl/curl.h>
-#include <curl/types.h>
-#include <curl/easy.h>
-
-#include <stdio.h>
-#include <string>
-
-//#include <curlpp/Easy.hpp>
-
+#include <QNetworkReply>
 
 
 struct FRAME_WIDGET
@@ -118,7 +107,5 @@ struct MIX
 	double price[3];
 	double PA;
 };
-
-
 
 #endif

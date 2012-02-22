@@ -1,7 +1,7 @@
 #-------------------------------------------------
 #
-# Projekt Supermarket, kalkulacka pro Supermarket
-# fondu od spolecnosti Pioneer Investments.
+# Projekt Supermarket, kalkulaèka pro Supermarket
+# fondù od spoleènosti Pioneer Investments.
 #
 #-------------------------------------------------
 
@@ -47,42 +47,68 @@ debug {
 	CONFIG += console
 }
 
-# build path
-DESTDIR = $${PWD}/../build
-
-# path to sources
-SRCS = $${PWD}
-
-# path to icons from sources
-ICONS_PATH = "$${SRCS}/img/*.*"
-
-
 macx {
-	# set program icon
-	ICON = img/icon.icns
 
-	# set bundle info
+	# nastaveni adresy pro výstup
+	DESTDIR = ../build
+
+	# nastavení ikony
+	ICON = Resources/icon.icns
+
+	# nastavení .plist souboru (informace o aplikaci)
 	QMAKE_INFO_PLIST = Info.plist
 
-	# set path to Resources of bundle
-	RESOURCES_PATH = $${DESTDIR}/Supermarket.app/Contents/Resources/
-
-	# command to copy icons
-	copyfiles.commands += "cp $${ICONS_PATH} $${RESOURCES_PATH}"
+	# nastavení pøíkazu pro kopírování
+	RES_COMMAND.commands += "cp Resources/*.* $${DESTDIR}/$${TARGET}.app/Contents/Resources/"
+	RES_COMMAND.target = $${DESTDIR}/$${TARGET}.app/Contents/Resources
 }
 
 win32 {
-	# set rc file for program icon
-	RC_FILE += img/ico/icon.rc
 
-	# set path to icons folder
-	RESOURCE_PATH = $${DESTDIR}/img/
+	# nastaveni adresy pro výstup
+	DESTDIR = ..\\build
 
-	# command to copy icons
-	copyfiles.commands = @call copy $${ICONS_PATH} $${RESOURCE_PATH}
+	# nastavení .rc souboru pro naètení ikony
+	RC_FILE += icon.rc
+
+	# nastavení pøíkazu pro kopírování
+	RES_COMMAND.commands = "ROBOCOPY ..\\program\\Resources ..\\build\\Resources /MIR"
+	RES_COMMAND.target = ..\\build\\Resources
+
+	# Copy required DLLs to output directory
+	CONFIG(debug, debug|release) {
+
+		QtCored4.commands = copy /Y %QTDIR%\\bin\\QtCored4.dll $${DESTDIR}
+		QtCored4.target = $${DESTDIR}/QtCored4.dll
+		QtGuid4.commands = copy /Y %QTDIR%\\bin\\QtGuid4.dll $${DESTDIR}
+		QtGuid4.target = $${DESTDIR}/QtGuid4.dll
+
+		QMAKE_EXTRA_TARGETS += QtCored4 QtGuid4
+		PRE_TARGETDEPS += $${DESTDIR}/QtCored4.dll $${DESTDIR}/QtGuid4.dll
+
+	} else:CONFIG(release, debug|release) {
+
+		QtCore4.commands = copy /Y %QTDIR%\\bin\\QtCore4.dll $${DESTDIR}
+		QtCore4.target = $${DESTDIR}/QtCore4.dll
+		QtGui4.commands = copy /Y %QTDIR%\\bin\\QtGui4.dll $${DESTDIR}
+		QtGui4.target = $${DESTDIR}/QtGui4.dll
+
+		QMAKE_EXTRA_TARGETS += QtCore4 QtGui4
+		PRE_TARGETDEPS += $${DESTDIR}/QtCore4.dll $${DESTDIR}/QtGui4.dll
+	} else {
+		error(Unknown set of dependencies.)
+	}
+
+	mingwm.commands = copy /Y %QTDIR%\\bin\\mingwm10.dll $${DESTDIR}
+	mingwm.target = $${DESTDIR}/mingwm10.dll
+	libgcc.commands = copy /Y %QTDIR%\\bin\\libgcc_s_dw2-1.dll $${DESTDIR}
+	libgcc.target = $${DESTDIR}/libgcc_s_dw2-1.dll
+
+	QMAKE_EXTRA_TARGETS += mingwm libgcc
+	PRE_TARGETDEPS += $${DESTDIR}/mingwm10.dll $${DESTDIR}/libgcc_s_dw2-1.dll
+
 }
 
-# commands for copy files
-QMAKE_EXTRA_TARGETS += copyfiles
-POST_TARGETDEPS += copyfiles
-
+# okopírování pøíkazu "kopírování obsahu slo¾ky Resources" do fronty
+QMAKE_EXTRA_TARGETS += RES_COMMAND
+PRE_TARGETDEPS += $${RES_COMMAND.target}

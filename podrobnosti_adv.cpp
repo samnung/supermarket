@@ -339,7 +339,7 @@ void podrobnosti_adv::selectMix(int a)
 	this->setWindowTitle(QString("Podrobnosti mixu ") + QString::number(a+1));
 	files->dataToLabels(frame, a);
 
-	this->mix_type->setText(files->getMixType(a));
+	this->mix_type->setText(files->mixType(a));
 	this->mix_type->setStyleSheet(files->styleMixType(a));
 	this->buttonArray[a]->setStyleSheet(files->styleButtonsSelect());
 

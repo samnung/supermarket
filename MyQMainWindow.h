@@ -19,9 +19,10 @@ public:
 	{
 		return *window_number;
 	}
-	virtual void closeEvent(QCloseEvent *)
+	virtual void closeEvent(QCloseEvent *e)
 	{
 		emit windowClosed(*window_number);
+		QMainWindow::closeEvent(e);
 	}
 
 protected:

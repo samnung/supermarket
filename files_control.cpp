@@ -14,6 +14,7 @@ files_control::files_control()
 //	dir_apps->cdUp();
 
 	file_actual = new QFile(dir_resources->path() + QDir::separator() + QString(FILE_XML_ACTUAL_NAME));
+	QMessageBox::information(NULL, NULL, file_actual->fileName());
 	xml_actual = new QXmlStreamReader(file_actual);
 
 	xml_name_splash_image = new QString;
@@ -71,51 +72,51 @@ void files_control::loadActual()
 
 			if (xml_actual->name() == "version")
 			{
-				if (a2QStr(xml_actual_atrrs, "type") == "application")
+				if (a2qstr(xml_actual_atrrs, "type") == "application")
 				{
 					*xml_version_app = QString(xml_actual->readElementText()).toInt();
 				}
-				else if (a2QStr(xml_actual_atrrs, "type") == "database_png")
+				else if (a2qstr(xml_actual_atrrs, "type") == "database_png")
 				{
 					*xml_version_dat_png = QString(xml_actual->readElementText()).toInt();
 				}
-				else if (a2QStr(xml_actual_atrrs, "type") == "database_xml")
+				else if (a2qstr(xml_actual_atrrs, "type") == "database_xml")
 				{
 					*xml_version_dat_xml = QString(xml_actual->readElementText()).toInt();
 				}
 			}
 			else if (xml_actual->name() == "img")
 			{
-				if (a2QStr(xml_actual_atrrs, "type") == "splash")
+				if (a2qstr(xml_actual_atrrs, "type") == "splash")
 				{
 					*xml_name_splash_image = xml_actual->readElementText();
 				}
-				else if (a2QStr(xml_actual_atrrs, "type") == "app_icon")
+				else if (a2qstr(xml_actual_atrrs, "type") == "app_icon")
 				{
 					*xml_name_app_icon = xml_actual->readElementText();
 				}
-				else if (a2QStr(xml_actual_atrrs, "type") == "info_icon")
+				else if (a2qstr(xml_actual_atrrs, "type") == "info_icon")
 				{
 					*xml_name_info_icon = xml_actual->readElementText();
 				}
 			}
 			else if (xml_actual->name() == "name")
 			{
-				if (a2QStr(xml_actual_atrrs, "type") == "database_xml")
+				if (a2qstr(xml_actual_atrrs, "type") == "database_xml")
 				{
 					*xml_name_database = xml_actual->readElementText();
 				}
-				else if (a2QStr(xml_actual_atrrs, "type") == "database_xml_date")
+				else if (a2qstr(xml_actual_atrrs, "type") == "database_xml_date")
 				{
 					*xml_name_database_date = xml_actual->readElementText();
 				}
-				else if (a2QStr(xml_actual_atrrs, "type") == "database_png")
+				else if (a2qstr(xml_actual_atrrs, "type") == "database_png")
 				{
 					*xml_name_dir_database_png = xml_actual->readElementText();
 				}
-				else if (a2QStr(xml_actual_atrrs, "type") == "mix")
+				else if (a2qstr(xml_actual_atrrs, "type") == "mix")
 				{
-					*xml_mixs_name[QString(a2QStr(xml_actual_atrrs, "id")).toInt() - 1] = xml_actual->readElementText();
+					*xml_mixs_name[QString(a2qstr(xml_actual_atrrs, "id")).toInt() - 1] = xml_actual->readElementText();
 				}
 			}
 		}
@@ -138,19 +139,19 @@ void files_control::loadData()
 			*xml_actual_atrrs = xml_database->attributes();
 			if (xml_database->name() == "mix")
 			{
-				actual_mix = a2Int(xml_actual_atrrs, "ID") - 1;
+				actual_mix = a2int(xml_actual_atrrs, "ID") - 1;
 				if (actual_mix != -1)
 				{
-					mix[actual_mix].mix_type = a2QStr(xml_actual_atrrs, "type");
-					mix[actual_mix].mix_type_styleSheet = a2QStr(xml_actual_atrrs, "color");
+					mix[actual_mix].mix_type = a2qstr(xml_actual_atrrs, "type");
+					mix[actual_mix].mix_type_styleSheet = a2qstr(xml_actual_atrrs, "color");
 				}
 			}
 			else if (xml_database->name() == "folder")
 			{
-				actual_folder = a2Int(xml_actual_atrrs, "ID") - 1;
+				actual_folder = a2int(xml_actual_atrrs, "ID") - 1;
 				if (actual_folder != -1 && actual_mix != -1)
 				{
-					mix[actual_mix].frame[actual_folder].count = a2Int(xml_actual_atrrs, "count");
+					mix[actual_mix].frame[actual_folder].count = a2int(xml_actual_atrrs, "count");
 				}
 			}
 			else if (xml_database->name() == "item")
@@ -159,14 +160,14 @@ void files_control::loadData()
 				{
 					if (actual_folder == 5 || actual_folder == 6)
 					{
-						mix[actual_mix].frame[actual_folder].text[a2Int(xml_actual_atrrs, "ID") - 1] = xml_database->readElementText();
-						mix[actual_mix].frame[actual_folder].has_value[a2Int(xml_actual_atrrs, "ID") - 1] = true;
+						mix[actual_mix].frame[actual_folder].text[a2int(xml_actual_atrrs, "ID") - 1] = xml_database->readElementText();
+						mix[actual_mix].frame[actual_folder].has_value[a2int(xml_actual_atrrs, "ID") - 1] = true;
 					}
 					else
 					{
-						mix[actual_mix].frame[actual_folder].value[a2Int(xml_actual_atrrs, "ID") - 1] = QString(xml_database->readElementText()).toDouble();
-						mix[actual_mix].frame[actual_folder].text[a2Int(xml_actual_atrrs, "ID") - 1] = a2QStr(xml_actual_atrrs, "name");
-						mix[actual_mix].frame[actual_folder].has_value[a2Int(xml_actual_atrrs, "ID") - 1] = true;
+						mix[actual_mix].frame[actual_folder].value[a2int(xml_actual_atrrs, "ID") - 1] = QString(xml_database->readElementText()).toDouble();
+						mix[actual_mix].frame[actual_folder].text[a2int(xml_actual_atrrs, "ID") - 1] = a2qstr(xml_actual_atrrs, "name");
+						mix[actual_mix].frame[actual_folder].has_value[a2int(xml_actual_atrrs, "ID") - 1] = true;
 					}
 				}
 			}
@@ -174,7 +175,7 @@ void files_control::loadData()
 			{
 				if (actual_mix != -1)
 				{
-					mix[actual_mix].price[a2Int(xml_actual_atrrs, "ID") - 1] = QString(xml_database->readElementText()).toDouble();
+					mix[actual_mix].price[a2int(xml_actual_atrrs, "ID") - 1] = QString(xml_database->readElementText()).toDouble();
 				}
 			}
 			xml_database->readNextStartElement();

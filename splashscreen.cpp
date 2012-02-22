@@ -8,7 +8,7 @@ splashscreen::splashscreen()
 	label->setAttribute(Qt::WA_TranslucentBackground, true);				//pruhledny widget
 	label->setWindowFlags(Qt::FramelessWindowHint);						//bez ramecku
 
-	rect = new QRect(qApp->desktop()->screenGeometry());
+	rect = new QRect(qApp->desktop()->screenGeometry());				// ziskání rozlišení obrazovky
 
 	timer = new QTimer;
 	timer->setInterval(1000);

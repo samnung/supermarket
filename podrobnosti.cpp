@@ -102,7 +102,7 @@ void podrobnosti::selectMix(int a)
 	this->setWindowTitle(QString("Podrobnosti mixu ") + QString::number(a+1));
 	Scene = new QGraphicsScene();
 	View->setScene(Scene);
-	Scene->addPixmap(QPixmap(files->pathMixPodrobnosti(a)));
+	Scene->addPixmap(QPixmap(files->pathMixDetails(a)));
 	//View->centerOn(0,0);
 	View->update();
 	View->setFocus();
