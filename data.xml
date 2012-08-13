@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+<release>20101231</release><!-- YYYYMMDD -->
+	<mix ID="1" type="Velmi konzervativní portfolio">
+		<folder ID="1" name="simu_port" count="6">
+			<item ID="1" name="YTD">1,86</item>
+			<item ID="2" name="1 měsíc">-0,04</item>
+			<item ID="3" name="6 měsíců">0,81</item>
+			<item ID="4" name="1 rok">1,86</item>
+			<item ID="5" name="3 roky p.a.">1,64</item>
+			<item ID="6" name="5 let">1,40</item>
+		</folder>
+		<folder ID="2" name="simu_port_let" count="8">
+			<item ID="1" name="2003">1,40</item>
+			<item ID="2" name="2004">2,54</item>
+			<item ID="3" name="2005">2,10</item>
+			<item ID="4" name="2006">1,41</item>
+			<item ID="5" name="2007">0,68</item>
+			<item ID="6" name="2008">-0,66</item>
+			<item ID="7" name="2009">3,75</item>
+			<item ID="8" name="2010">1,86</item>
+		</folder>
+		<folder ID="3"name="slozeni_fondy" count="4">
+			<item ID="1" name="Pioneer – Sporokonto">40</item>
+			<item ID="2" name="ING Intl. (II) Český fond peněžního trhu">35</item>
+			<item ID="3" name="Pioneer – obligační fond">10</item>
+			<item ID="4" name="ING International Český fond obligaci">15</item>
+		</folder>
+		<folder ID="4" name="slozeni_aktiv" count="8">
+			<item ID="1" name="Peněžní trh" empty="no">75</item>
+			<item ID="2" name="Dluhopisy" empty="no">25</item>
+			<item ID="3" name="Dluhopisy s vysokým výnosem" empty="yes">0</item>
+			<item ID="4" name="Akcie Evropa a Sev. Amerika" empty="yes">0</item>
+			<item ID="5" name="Akcie východní Evropa" empty="yes">0</item>
+			<item ID="6" name="Akcie rozvíjející se trhy" empty="yes">0</item>
+			<item ID="7" name="Komodity" empty="yes">0</item>
+			<item ID="8" name="Aktivně řízené fondy" empty="yes">0</item>
+		</folder>
+		<folder ID="5" name="slozeni_spravce" count="2">
+			<item ID="1" name="Pioneer">50</item>
+			<item ID="2" name="ING">50</item>
+		</folder>
+		<folder ID="6" name="profil" count="8">
+			<item ID="1">Klient pravděpodobně dává přednost stabilitě investice a jistotě před dlouhodobě dosažitelnými budoucími výnosy.</item>
+			<item ID="2">Když se rozhodne investovat, pak se obvykle snaží minimalizovat riziko potenciální ztráty.</item>
+			<item ID="3">Pokles hodnoty investice by zřejmě nesl těžce a s největší pravděpodobností by zareagoval odkupem.</item>
+			<item ID="4">Přes tato výnosová omezení však usiluje o dosažení finanční jistoty s cílem zabezpečit sebe samého a rodinné příslušníky.</item>
+			<item ID="5">Většinu svých prostředků má proto umístěnu v klasických bankovních produktech, které jsou likvidní a umožňují mu tak téměř okamžitý přístup k financím pro případ jakýchkoliv (plánovaných i neplánovaných) budoucích potřeb.</item>
+			<item ID="6">Klient vykazuje silnější citlivost na riziko a v situaci výraznější volatility má silnou tendenci podléhat investičnímu stresu a zaujímat emociálně laděné postoje.</item>
+			<item ID="7">V případě zainvestování je žádoucí velmi častý kontakt s finančním poradcem, zvláště během negativního cyklu a volatility, kdy je třeba individuálního přístupu.</item>
+			<item ID="8">Pokud zainvestuje na hranici své rizikové tolerance, pak je velmi náročný na management psychologických rizik a vyžaduje v tomto ohledu individuální přístup.</item>
+		</folder>
+	</mix>
+</database>

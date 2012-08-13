@@ -1,0 +1,4 @@
+# Supermarket .gitignore
+
+build/*
+tmp/*
