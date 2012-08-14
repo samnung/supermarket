@@ -3,3 +3,8 @@
 .DS_Store
 build/*
 tmp/*
+
+ui_*
+moc_*
+qrc_*
+*.o
