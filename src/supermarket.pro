@@ -23,8 +23,8 @@ HEADERS += \
 	files_control.h \
 	define.h \
 	MyQToolButton.h \
-	MyQMainWindow.h \
-	cenik.h
+	cenik.h \
+    SMainWindow.h
 
 SOURCES	+= \
 	splashscreen.cpp \
@@ -47,6 +47,8 @@ debug {
 	CONFIG += console
 }
 
+RESOURCE_PATH = ../resources
+
 macx {
 
 	# nastaveni adresy pro výstup
@@ -58,9 +60,16 @@ macx {
 	# nastavení .plist souboru (informace o aplikaci)
 	QMAKE_INFO_PLIST = ../mac/Info.plist
 
+
 	# nastavení příkazu pro kopírování
-	RES_COMMAND.commands += "cp resources/*.* $${DESTDIR}/$${TARGET}.app/Contents/Resources/"
-	RES_COMMAND.target = $${DESTDIR}/$${TARGET}.app/Contents/Resources
+	RESOURCE_FILES = $${RESOURCE_PATH}/
+
+
+	for(FILE, RESOURCE_FILES) {
+	    QMAKE_POST_LINK += $$quote(cp -R $${FILE} $${DESTDIR}/$${TARGET}.app/Contents/Resources$$escape_expand(\n\t))
+	}
+	#RES_COMMAND.commands += "cp resources/*.* $${DESTDIR}/$${TARGET}.app/Contents/Resources/"
+	#RES_COMMAND.target = $${DESTDIR}/$${TARGET}.app/Contents/Resources
 }
 
 win32 {

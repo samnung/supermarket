@@ -1,9 +1,8 @@
 #include "podrobnosti_adv.h"
 
-podrobnosti_adv::podrobnosti_adv(files_control *_files, int number)
+podrobnosti_adv::podrobnosti_adv(files_control *_files)
 {
 	files = _files;
-	setWindowNumber(number);
 
 	mix_previous = new int(-1);
 	mix_actual = new int(-1);
@@ -279,17 +278,17 @@ void podrobnosti_adv::setup()
 
 	for(int i = 0; i < 13; i++)
 	{
-		buttonArray[i] = new MyQToolButton();
-		buttonArray[i]->setText(QString::number(i+1));
-		buttonArray[i]->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-		buttonArray[i]->setMinimumWidth(30);
-		buttonArray[i]->setNumber(i);
-		buttonArray[i]->setStyleSheet(files->styleButtonsNormal());
-		buttonArray[i]->setFont(QFont("Arial Black", 10));
+	   buttonArray[i] = new MyQToolButton();
+	   buttonArray[i]->setText(QString::number(i+1));
+	   buttonArray[i]->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+	   buttonArray[i]->setMinimumWidth(30);
+	   buttonArray[i]->setNumber(i);
+	   buttonArray[i]->setStyleSheet(files->styleButtonsNormal());
+	   buttonArray[i]->setFont(QFont("Arial Black", 10));
 
-		connect(this->buttonArray[i], SIGNAL(clicked(int)), this, SLOT(selectMix(int)));
+	   connect(this->buttonArray[i], SIGNAL(clicked(int)), this, SLOT(selectMix(int)));
 
-		layoutButtons->addWidget(buttonArray[i], 0, i+2, 1, 1);
+	   layoutButtons->addWidget(buttonArray[i], 0, i+2, 1, 1);
 	}
 
 	horizontalSpacer_buttons_left = new QSpacerItem(10, 0, QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
@@ -347,7 +346,7 @@ void podrobnosti_adv::selectMix(int a)
 	this->text_browser_2->setText(files->sideText(a, 6));
 	if (*mix_previous != -1 && *mix_previous != a)
 	{
-		buttonArray[*mix_previous]->setStyleSheet(files->styleButtonsNormal());
+	   buttonArray[*mix_previous]->setStyleSheet(files->styleButtonsNormal());
 	}
 	*mix_previous = a;
 
@@ -359,7 +358,7 @@ void podrobnosti_adv::setupFrame(FRAME_WIDGET *frame, int count)
 	frame->layout = new QGridLayout;
 	frame->layout->setSpacing(0);
 
-			/* TITLE */
+		   /* TITLE */
 
 	frame->title = new QLabel;
 	frame->title->setFont(files->fontFrameTitle());
@@ -371,7 +370,7 @@ void podrobnosti_adv::setupFrame(FRAME_WIDGET *frame, int count)
 
 	frame->layout->addWidget(frame->title, 0, 0, 1, 3);
 
-			/* SUBTITLE */
+		   /* SUBTITLE */
 
 	frame->subtitle_left = new QLabel;
 	frame->subtitle_left->setFont(files->fontFrameSubtitle());
@@ -390,47 +389,47 @@ void podrobnosti_adv::setupFrame(FRAME_WIDGET *frame, int count)
 
 	frame->layout->addWidget(frame->subtitle_right, 2, 1, 1, 2);
 
-			/* TEXTS & VALUES */
+		   /* TEXTS & VALUES */
 	for (int i = 0; i < 10; i++)
-		frame->showed[i] = new bool(false);
+	   frame->showed[i] = new bool(false);
 
 	for(int i = 0, j = 4; i < count; i++, j += 2)
 	{
-		frame->text[i] = new QLabel("NO_TEXT");
-		frame->text[i]->setFont(files->fontFrameText());
-		frame->text[i]->setStyleSheet(files->colorGrey());
-		frame->text[i]->setIndent(10);
-		frame->text[i]->setMargin(0);
-		frame->text[i]->setAlignment(Qt::AlignLeft|Qt::AlignVCenter);
+	   frame->text[i] = new QLabel("NO_TEXT");
+	   frame->text[i]->setFont(files->fontFrameText());
+	   frame->text[i]->setStyleSheet(files->colorGrey());
+	   frame->text[i]->setIndent(10);
+	   frame->text[i]->setMargin(0);
+	   frame->text[i]->setAlignment(Qt::AlignLeft|Qt::AlignVCenter);
 
-		frame->layout->addWidget(frame->text[i], j, 0, 1, 2);
+	   frame->layout->addWidget(frame->text[i], j, 0, 1, 2);
 
-		frame->value[i] = new QLabel("NO_VALUE");
-		frame->value[i]->setFont(files->fontFrameText());
-		frame->value[i]->setStyleSheet(files->colorGrey());
-		frame->value[i]->setIndent(10);
-		frame->value[i]->setMargin(0);
-		frame->value[i]->setAlignment(Qt::AlignRight|Qt::AlignVCenter);
-		frame->value[i]->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse);
-		frame->value[i]->setMaximumWidth(50);
+	   frame->value[i] = new QLabel("NO_VALUE");
+	   frame->value[i]->setFont(files->fontFrameText());
+	   frame->value[i]->setStyleSheet(files->colorGrey());
+	   frame->value[i]->setIndent(10);
+	   frame->value[i]->setMargin(0);
+	   frame->value[i]->setAlignment(Qt::AlignRight|Qt::AlignVCenter);
+	   frame->value[i]->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse);
+	   frame->value[i]->setMaximumWidth(50);
 
-		frame->layout->addWidget(frame->value[i], j, 2, 1, 1);
+	   frame->layout->addWidget(frame->value[i], j, 2, 1, 1);
 
-		*(frame->showed[i]) = true;
+	   *(frame->showed[i]) = true;
 	}
 
-			/* LINES */
+		   /* LINES */
 
 	for(int i = 0, j = 1; i < count + 2; i++, j += 2)
 	{
-		frame->line[i] = new QFrame;
-		frame->line[i]->setStyleSheet(files->colorGrey());
-		frame->line[i]->setFrameShadow(QFrame::Plain);
-		frame->line[i]->setLineWidth(1);
-		frame->line[i]->setMidLineWidth(0);
-		frame->line[i]->setFrameShape(QFrame::HLine);
+	   frame->line[i] = new QFrame;
+	   frame->line[i]->setStyleSheet(files->colorGrey());
+	   frame->line[i]->setFrameShadow(QFrame::Plain);
+	   frame->line[i]->setLineWidth(1);
+	   frame->line[i]->setMidLineWidth(0);
+	   frame->line[i]->setFrameShape(QFrame::HLine);
 
-		frame->layout->addWidget(frame->line[i], j, 0, 1, 3);
+	   frame->layout->addWidget(frame->line[i], j, 0, 1, 3);
 	}
 
 	frame->line[0]->setStyleSheet(files->colorAntracite());

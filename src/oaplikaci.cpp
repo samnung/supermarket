@@ -16,7 +16,7 @@ void oAplikaci::setup()
 	font1 = new QFont("Arial", 20, false);
 	font1->setBold(true);
 	font2 = new QFont("Arial", 14);
-	font3 = new QFont("Arial", 10);
+	font3 = new QFont("Arial", 12);
 
 	mainLayout = new QGridLayout(this);
 	mainLayout->setSizeConstraint(QLayout::SetFixedSize);

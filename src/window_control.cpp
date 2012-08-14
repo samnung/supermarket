@@ -3,182 +3,110 @@
 window_control::window_control(files_control *_files)
 {
 	files = _files;
-	ui_oaplikaci_alloced = new bool(false);
-	ui_prehled_alloced = new bool(false);
-	ui_cenik_alloced = new bool(false);
-
-	for(int i = 0; i < 10; i++)
-	{
-		mainwin_showed[i] = new bool(false);
-		mainwin_alloced[i] = new bool(false);
-		ui_podrobnosti_showed[i] = new bool(false);
-		ui_podrobnosti_alloced[i] = new bool(false);
-		ui_podrobnosti_plus_showed[i] = new bool(false);
-		ui_podrobnosti_plus_alloced[i] = new bool(false);
-	}
 }
 
 void window_control::showMainWindow()
 {
-	int a = findFirstFree(mainwin_showed, APP_WINDOW_MAX);
-	if (a != -1) {
-		if (*mainwin_alloced[a] == false)
-		{
-			mainwin[a] = new MainWindow(files, a);
-			mainwin[a]->show();
-			*mainwin_alloced[a] = true;
-			*mainwin_showed[a] = true;
+	MainWindow *window = new MainWindow(files);
+	if (window != NULL) {
+		window->show();
 
-			connect(mainwin[a]->ui->action_new_window, SIGNAL(triggered()), this, SLOT(showMainWindow()));
-			connect(mainwin[a], SIGNAL(windowClosed(int)), this, SLOT(closeMainWindow(int)));
+		connect(window->ui->action_new_window, SIGNAL(triggered()), this, SLOT(showMainWindow()));
+		connect(window, SIGNAL(windowClosing(void*)), this, SLOT(closeMainWindow(void*)));
+		connect(window->ui->actionO_programu, SIGNAL(triggered()), this, SLOT(showOAplikaci()));
+		connect(window->ui->actionO_Qt, SIGNAL(triggered()), qApp, SLOT(aboutQt()));
+		connect(window->ui->actionCen_k, SIGNAL(triggered()), this, SLOT(showCenik()));
+		connect(window->ui->actionPrehled, SIGNAL(triggered()), this, SLOT(showPrehled()));
+		connect(window->ui->actionPodrobnosti, SIGNAL(triggered()), this, SLOT(showPodrobnosti()));
+		connect(window, SIGNAL(otaznikClicked(int)), this, SLOT(showPodrobnosti(int)));
+		connect(window->ui->actionPodrobnosti_2, SIGNAL(triggered()), this, SLOT(showPodrobnostiPlus()));
+		connect(window->ui->action_go_home, SIGNAL(triggered()), this, SLOT(goHome()));
+		connect(window->ui->action_quit, SIGNAL(triggered()), qApp, SLOT(quit()));
 
-			connect(mainwin[a]->ui->actionO_programu, SIGNAL(triggered()), this, SLOT(showOAplikaci()));
-			connect(mainwin[a]->ui->actionO_Qt, SIGNAL(triggered()), qApp, SLOT(aboutQt()));
-
-			connect(mainwin[a]->ui->actionCen_k, SIGNAL(triggered()), this, SLOT(showCenik()));
-
-			connect(mainwin[a]->ui->actionPrehled, SIGNAL(triggered()), this, SLOT(showPrehled()));
-
-			connect(mainwin[a]->ui->actionPodrobnosti, SIGNAL(triggered()), this, SLOT(showPodrobnosti()));
-			connect(mainwin[a], SIGNAL(otaznikClicked(int)), this, SLOT(showPodrobnosti(int)));
-
-			connect(mainwin[a]->ui->actionPodrobnosti_2, SIGNAL(triggered()), this, SLOT(showPodrobnostiPlus()));
-
-			connect(mainwin[a]->ui->action_go_home, SIGNAL(triggered()), this, SLOT(goHome()));
-
-			connect(mainwin[a]->ui->action_quit, SIGNAL(triggered()), qApp, SLOT(quit()));
-		}
-		else
-		{
-			*mainwin_showed[a] = true;
-			mainwin[a]->show();
-			mainwin[a]->activateWindow();
-		}
-		mainwin[a]->show();
+		list_main_window.append(window);
 	}
 }
 
-void window_control::closeMainWindow(int a)
+void window_control::closeMainWindow(void *window)
 {
-	*mainwin_showed[a] = false;
+	list_main_window.removeOne((MainWindow*)window);
+	((MainWindow*)window)->close();
+	delete (MainWindow*)window;
 }
 
 
 void window_control::showOAplikaci()
 {
-	if (*ui_oaplikaci_alloced == false)
-	{
+	if (ui_oaplikaci == NULL) {
 		ui_oaplikaci = new oAplikaci(files);
 		ui_oaplikaci->show();
-		*ui_oaplikaci_alloced = true;
 	}
-	else
-	{
-		ui_oaplikaci->show();
-	}
-
 }
 
 
 
 
-int window_control::showPodrobnosti(int selected_mix)
+void window_control::showPodrobnosti(int selected_mix)
 {
-	int index = findFirstFree(ui_podrobnosti_showed, APP_WINDOW_MAX);
-	if (*ui_podrobnosti_alloced[index] == false)
-	{
-		ui_podrobnosti[index] = new podrobnosti(files, index);
-		ui_podrobnosti[index]->show();
-		*ui_podrobnosti_alloced[index] = true;
-		*ui_podrobnosti_showed[index] = true;
+	podrobnosti *window = new podrobnosti(files);
+	if (window != NULL) {
+		window->show();
 
-		connect(ui_podrobnosti[index], SIGNAL(windowClosed(int)), this, SLOT(closePodrobnosti(int)));
-	}
-	else
-	{
-		ui_podrobnosti[index]->show();
-		ui_podrobnosti[index]->activateWindow();
-		*ui_podrobnosti_showed[index] = true;
-	}
-	ui_podrobnosti[index]->selectMix(selected_mix);
+		connect(window, SIGNAL(windowClosing(void*)), this, SLOT(closePodrobnosti(void*)));
+		window->selectMix(selected_mix);
 
-	return index;
+		list_podrobnosti.append(window);
+	}
 }
-
-void window_control::closePodrobnosti(int number)
+void window_control::closePodrobnosti(void *window)
 {
-	*ui_podrobnosti_showed[number] = false;
+	list_podrobnosti.removeOne((podrobnosti*)window);
+	((podrobnosti*)window)->close();
+	delete (podrobnosti*)window;
 }
 
 
 
 void window_control::showPodrobnostiPlus()
 {
-	int a = findFirstFree(ui_podrobnosti_plus_showed, APP_WINDOW_MAX);
-	if (*ui_podrobnosti_plus_alloced[a] == false)
-	{
-		ui_podrobnosti_plus[a] = new podrobnosti_adv(files, a);
-		ui_podrobnosti_plus[a]->show();
-		*ui_podrobnosti_plus_alloced[a] = true;
-		*ui_podrobnosti_plus_showed[a] = true;
+	podrobnosti_adv *window = new podrobnosti_adv(files);
+	if (window != NULL) {
+		window->show();
 
-		connect(ui_podrobnosti_plus[a]->actionNewWindow, SIGNAL(triggered()), this, SLOT(showPodrobnostiPlus()));
-		connect(ui_podrobnosti_plus[a], SIGNAL(windowClosed(int)), this, SLOT(closePodrobnostiPlus(int)));
-	}
-	else
-	{
-		ui_podrobnosti_plus[a]->show();
-		ui_podrobnosti_plus[a]->activateWindow();
-		*ui_podrobnosti_plus_showed[a] = true;
+		connect(window, SIGNAL(windowClosing(void*)), this, SLOT(closePodrobnostiPlus(void*)));
+		connect(window->actionNewWindow, SIGNAL(triggered()), this, SLOT(showPodrobnostiPlus()));
+
+		list_podrobnosti_plus.append(window);
 	}
 }
 
-void window_control::closePodrobnostiPlus(int window)
+void window_control::closePodrobnostiPlus(void * window)
 {
-	*ui_podrobnosti_plus_showed[window] = false;
+	list_podrobnosti_plus.removeOne((podrobnosti_adv*)window);
+	((podrobnosti_adv*)window)->close();
+	delete (podrobnosti_adv*)window;
 }
 
 
 void window_control::showCenik()
 {
-	if (*ui_cenik_alloced == false)
-	{
+	if (ui_cenik != NULL)
+		ui_cenik->show();
+	else {
 		ui_cenik = new cenik(files);
-		ui_cenik->show();
-		*ui_cenik_alloced = true;
-	}
-	else
-	{
-		ui_cenik->show();
+		if (ui_cenik != NULL)
+			ui_cenik->show();
 	}
 }
 
 void window_control::showPrehled()
 {
-	if (*ui_prehled_alloced == false)
-	{
+	if (ui_prehled == NULL) {
 		ui_prehled = new prehled();
-		ui_prehled->show();
-		*ui_prehled_alloced = true;
-	}
-	else
-	{
 		ui_prehled->show();
 	}
 }
 
-int window_control::findFirstFree(bool *array[], int maximum)
-{
-	for(int i = 0; i < maximum; i++)
-	{
-		if(*array[i] == false)
-		{
-			return i;
-		}
-	}
-	QMessageBox::warning(NULL, APP_NAME, QString::fromUtf8("Dosažen maximální počet oken"));
-	return -1;
-}
 
 void window_control::goHome() // otevre webovy prohlizec s adresou
 {

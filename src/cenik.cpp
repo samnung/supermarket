@@ -17,9 +17,7 @@ cenik::cenik(files_control *_files)
 
 void cenik::setup()
 {
-	window = new QWidget(this);
-
-	layout = new QGridLayout(window);
+	layout = new QGridLayout(this);
 	layout->setSpacing(0);
 	layout->setMargin(0);
 
@@ -60,8 +58,8 @@ void cenik::setup()
 		}
 	}
 
-	window->setLayout(layout);
-	setCentralWidget(window);
+	this->setLayout(layout);
+	setCentralWidget(this);
 
 	label[0][0]->setText(QString::fromUtf8("Hodnota v Kč"));
 	label[1][0]->setText(QString::fromUtf8("méně než 350.000"));

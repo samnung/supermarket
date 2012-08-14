@@ -6,23 +6,23 @@
 
 class splashscreen : public QObject
 {
-	Q_OBJECT
+    Q_OBJECT
 public:
-	splashscreen();
-	~splashscreen();
-	void show();
-	void setTimer(int a); /* nastaveni casovace v ms */
+    splashscreen();
+    ~splashscreen();
+    void show();
+    void setTimer(int a); /* nastaveni casovace v ms */
 
 private:
-	QLabel *label;
-	QPixmap *pix;
-	QRect *rect;
-	QTimer *timer;
+    QLabel *label;
+    QPixmap *pix;
+    QRect *rect;
+    QTimer *timer;
 
-	window_control *win;
-	files_control *files;
+    window_control *win;
+    files_control *files;
 public slots:
-	void finish();
+    void finish();
 };
 
 #endif // SPLASHSCREEN_H

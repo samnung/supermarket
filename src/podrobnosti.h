@@ -10,14 +10,14 @@
 #include <QSpacerItem>
 #include "files_control.h"
 #include "MyQToolButton.h"
-#include "MyQMainWindow.h"
+#include "SMainWindow.h"
 
-class podrobnosti : public MyQMainWindow
+class podrobnosti : public SMainWindow
 {
 	Q_OBJECT
 
 public:
-	explicit podrobnosti(files_control *_files, int number);
+	explicit podrobnosti(files_control *_files);
 	~podrobnosti();
 	void setup();
 public slots:

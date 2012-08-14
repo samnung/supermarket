@@ -2,36 +2,36 @@
 #define PODROBNOSTI_ADV_H
 
 #include "MyQToolButton.h"
-#include "MyQMainWindow.h"
+#include "SMainWindow.h"
 #include "define.h"
 #include "files_control.h"
 
 
 
-class podrobnosti_adv : public MyQMainWindow
+class podrobnosti_adv : public SMainWindow
 {
-    Q_OBJECT
+	Q_OBJECT
 
 public:
-	explicit podrobnosti_adv(files_control *_files, int number);
-    ~podrobnosti_adv();
+	explicit podrobnosti_adv(files_control *_files);
+	~podrobnosti_adv();
 	QAction *actionNewWindow;
 	QAction *actionCloseWindow;
 
 private:
-    void setup();
+	void setup();
 	void setupFrame(FRAME_WIDGET *frame, int count = 10);
 
-    QWidget *centralwidget;
+	QWidget *centralwidget;
 
-    QGridLayout *centralWidgetLayout;
+	QGridLayout *centralWidgetLayout;
 
-    QScrollArea *scrollArea;
+	QScrollArea *scrollArea;
 
-    QWidget *scrollAreaWidgetContents;
+	QWidget *scrollAreaWidgetContents;
 
-    QGridLayout *gridLayout_main;
-    QGridLayout *gridLayout_left;
+	QGridLayout *gridLayout_main;
+	QGridLayout *gridLayout_left;
 	QGridLayout *gridLayout_mid;
 	QGridLayout *gridLayout_right;
 
@@ -47,12 +47,12 @@ private:
 	QSpacerItem *verticalSpacer_left_2;
 	QSpacerItem *verticalSpacer_left_3;
 
-    QSpacerItem *title_verticalSpacer;
-    QGridLayout *title_layout;
+	QSpacerItem *title_verticalSpacer;
+	QGridLayout *title_layout;
 
-    QLabel *mix_date;
-    QLabel *mix_name;
-    QLabel *mix_type;
+	QLabel *mix_date;
+	QLabel *mix_name;
+	QLabel *mix_type;
 
 	FRAME_WIDGET *frame[5];
 

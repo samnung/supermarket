@@ -1,8 +1,7 @@
 #include "podrobnosti.h"
 
-podrobnosti::podrobnosti(files_control *_files, int number)
+podrobnosti::podrobnosti(files_control *_files)
 {
-	this->setWindowNumber(number);
 	files = _files;
 	mix_previous = new int(-1);
 	setup();
@@ -25,15 +24,15 @@ void podrobnosti::setup()
 
 	for(int i = 0; i < 13; i++)
 	{
-		buttonArray[i] = new MyQToolButton();
-		buttonArray[i]->setText(QString::number(i+1));
-		buttonArray[i]->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-		buttonArray[i]->setMinimumWidth(30);
-		buttonArray[i]->setNumber(i);
-		buttonArray[i]->setStyleSheet(files->styleButtonsNormal());
-		buttonArray[i]->setFont(QFont("Arial Black", 10));
-		connect(this->buttonArray[i], SIGNAL(clicked(int)), this, SLOT(selectMix(int)));
-		layoutButtons->addWidget(buttonArray[i], 0, i+2, 1, 1);
+	   buttonArray[i] = new MyQToolButton();
+	   buttonArray[i]->setText(QString::number(i+1));
+	   buttonArray[i]->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+	   buttonArray[i]->setMinimumWidth(30);
+	   buttonArray[i]->setNumber(i);
+	   buttonArray[i]->setStyleSheet(files->styleButtonsNormal());
+	   buttonArray[i]->setFont(QFont("Arial Black", 10));
+	   connect(this->buttonArray[i], SIGNAL(clicked(int)), this, SLOT(selectMix(int)));
+	   layoutButtons->addWidget(buttonArray[i], 0, i+2, 1, 1);
 	}
 
 	horizontalSpacer_buttons_left = new QSpacerItem(10, 0, QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
@@ -109,7 +108,7 @@ void podrobnosti::selectMix(int a)
 	this->buttonArray[a]->setStyleSheet(files->styleButtonsSelect());
 	if (*mix_previous != -1 && *mix_previous != a)
 	{
-		buttonArray[*mix_previous]->setStyleSheet(files->styleButtonsNormal());
+	   buttonArray[*mix_previous]->setStyleSheet(files->styleButtonsNormal());
 	}
 	*mix_previous = a;
 }

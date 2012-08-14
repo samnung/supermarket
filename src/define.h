@@ -75,37 +75,38 @@
 #include <QShortcut>
 
 #include <QNetworkReply>
+#include <QList>
 
 
 struct FRAME_WIDGET
 {
-	QGridLayout *layout;
+    QGridLayout *layout;
 
-	QLabel *title;
-	QLabel *subtitle_left;
-	QLabel *subtitle_right;
+    QLabel *title;
+    QLabel *subtitle_left;
+    QLabel *subtitle_right;
 
-	QLabel *value[10];
-	QLabel *text[10];
-	QFrame *line[12];
-	bool *showed[10];
+    QLabel *value[10];
+    QLabel *text[10];
+    QFrame *line[12];
+    bool *showed[10];
 };
 
 struct FRAME
 {
-	QString text[10];
-	double value[10];
-	bool has_value[10];
-	int count;
+    QString text[10];
+    double value[10];
+    bool has_value[10];
+    int count;
 };
 
 struct MIX
 {
-	FRAME frame[7];
-	QString mix_type;
-	QString mix_type_styleSheet;
-	double price[3];
-	double PA;
+    FRAME frame[7];
+    QString mix_type;
+    QString mix_type_styleSheet;
+    double price[3];
+    double PA;
 };
 
 #endif

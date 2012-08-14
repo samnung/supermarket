@@ -1,19 +1,18 @@
 #ifndef CENIK_H
 #define CENIK_H
 
-#include "MyQMainWindow.h"
+#include "SMainWindow.h"
 #include "define.h"
 #include "files_control.h"
 
 
-class cenik : public MyQMainWindow
+class cenik : public SMainWindow
 {
 public:
 	cenik(files_control *_files);
 private:
 	void setup();
 
-	QWidget *window;
 	QGridLayout *layout;
 
 	QFrame *lineV[14];

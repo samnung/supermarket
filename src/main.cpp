@@ -6,7 +6,7 @@ int main(int argc, char *argv[])
 	QApplication app(argc, argv);
 
 	splashscreen *splash = new splashscreen();
-	splash->setTimer(1500);
+	splash->setTimer(1000);
 	splash->show();
 
 	return app.exec();

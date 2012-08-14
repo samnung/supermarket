@@ -1,16 +1,13 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-MainWindow::MainWindow(files_control *files, int _window_number) : /*QMainWindow(parent) , */ui(new Ui::MainWindow)
+MainWindow::MainWindow(files_control *files) : /*QMainWindow(parent) , */ui(new Ui::MainWindow)
 {
 	this->files = files;
-	//********** deklarace ************
 	ui->setupUi(this);
-	this->setWindowNumber(_window_number);
 
 	resize(minimumWidth(), minimumHeight());
 
-	//****** alokace ******
 	seznam_ = new seznam();
 	PV = new long double(0);
 	R = new double(0);
@@ -31,7 +28,7 @@ MainWindow::MainWindow(files_control *files, int _window_number) : /*QMainWindow
 	//********** doplnovani comboboxu ************
 	for(int i = 0; i < 13; i++)
 	{
-		ui->r_combo->addItem(QString("MIX %1: %2 %3").arg(i+1).arg(files->PA(i),6, 'f', 2).arg("p.a.", 5));
+	   ui->r_combo->addItem(QString("MIX %1: %2 %3").arg(i+1).arg(files->PA(i),6, 'f', 2).arg("p.a.", 5));
 	}
 	ui->r_combo->addItem(QString::fromUtf8("Vlastní hodnota"));
 
@@ -66,23 +63,23 @@ void MainWindow::rLineVlastniSelected(int a)
 {
 	if (a == 13)//pokud je v comboboxu zvoleny "Vlastni hodnota"
 	{
-		ui->r_line->show();								//odkryti r_line(vlastni hodnota)
-		ui->r_line->setFocus();						//focus na r_line (vlastni hodnota)
-		ui->r_line->setSelection(0,255);				//oznaceni celeho radku
-		ui->r_label_3->show();							//odkryti labelu (p.a.) vedle r_line (vlastni hodnoty)
+	   ui->r_line->show();								//odkryti r_line(vlastni hodnota)
+	   ui->r_line->setFocus();						//focus na r_line (vlastni hodnota)
+	   ui->r_line->setSelection(0,255);				//oznaceni celeho radku
+	   ui->r_label_3->show();							//odkryti labelu (p.a.) vedle r_line (vlastni hodnoty)
 
-		ui->otaznik_button->hide();					//skryti tlacitka otaznik
+	   ui->otaznik_button->hide();					//skryti tlacitka otaznik
 
-		setR(QString(""));								//nastaveni registru R na nulu
+	   setR(QString(""));								//nastaveni registru R na nulu
 	}
 	else
 	{
-		ui->r_line->hide();								//skryti r_line(vlastni hodnota)
-		ui->r_label_3->hide();							//skryti labelu (p.a.)
+	   ui->r_line->hide();								//skryti r_line(vlastni hodnota)
+	   ui->r_label_3->hide();							//skryti labelu (p.a.)
 
-		ui->otaznik_button->show();					//odkryti tlacitka Otaznik
+	   ui->otaznik_button->show();					//odkryti tlacitka Otaznik
 
-		setR(files->PA(a));							//dosazeni zvolene aktualni hodnoty do registru R
+	   setR(files->PA(a));							//dosazeni zvolene aktualni hodnoty do registru R
 	}
 }
 
@@ -121,11 +118,11 @@ void MainWindow::calculate() //provadi vypocet
 {
 	if ((QString(ui->poplatek_line->text()).toDouble() == 0.00))
 	{
-		this->ui->skutecny_label->setText(QString::fromUtf8("Skutečná vložená částka"));
+	   this->ui->skutecny_label->setText(QString::fromUtf8("Skutečná vložená částka"));
 	}
 	else
 	{
-		this->ui->skutecny_label->setText(QString("%L1").arg(*PV * (1 - (*popl / 100)), 0, 'f', 2) + QString::fromUtf8(" Kč"));
+	   this->ui->skutecny_label->setText(QString("%L1").arg(*PV * (1 - (*popl / 100)), 0, 'f', 2) + QString::fromUtf8(" Kč"));
 	}
 	*vysledna_hodnota = QString("%L1").arg(seznam_->vypocet(*PV, *R / 100, *T, *popl / 100),0,'f',2);
 	ui->vysledny_label->setText(*vysledna_hodnota + QString::fromUtf8(" Kč"));
@@ -143,21 +140,21 @@ void MainWindow::poplatekChecked()
 {
 	if (ui->poplatek_check->isChecked())
 	{
-		ui->poplatek_line->show();
-		ui->skutecny_label->show();
-		ui->procento->show();
-		ui->poplatek_line->setText(QString::number(*popl_last));
+	   ui->poplatek_line->show();
+	   ui->skutecny_label->show();
+	   ui->procento->show();
+	   ui->poplatek_line->setText(QString::number(*popl_last));
 
 	}
 	else
 	{
-		ui->poplatek_line->hide();
-		ui->skutecny_label->hide();
-		ui->procento->hide();
-		*popl_last = QString(ui->poplatek_line->text()).toDouble();
-		ui->poplatek_line->setText(QString("0"));
-		updateGeometry();
-		resize(0,0);
+	   ui->poplatek_line->hide();
+	   ui->skutecny_label->hide();
+	   ui->procento->hide();
+	   *popl_last = QString(ui->poplatek_line->text()).toDouble();
+	   ui->poplatek_line->setText(QString("0"));
+	   updateGeometry();
+	   resize(0,0);
 	}
 	emit anyValueChanged();
 }
