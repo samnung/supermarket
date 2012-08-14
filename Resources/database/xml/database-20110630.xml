@@ -1,0 +1,839 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<database>
+<release>20110630</release><!-- YYYYMMDD -->
+	<mix ID="1" type="Velmi konzervativní portfolio" color="color: rgb(255, 255, 255); background-color: rgb(119, 71, 13);">
+        <price_list>
+            <price ID="1">0,80</price>
+            <price ID="2">0,70</price>
+            <price ID="3">0,60</price>
+        </price_list>
+		<folder ID="1" name="simu_port" count="6">
+			<item ID="1" name="YTD"			>0,71</item>
+			<item ID="2" name="1 měsíc"		>-0,05</item>
+			<item ID="3" name="6 měsíců"	>0,71</item>
+			<item ID="4" name="1 rok"		>1,59</item>
+			<item ID="5" name="3 roky p.a."	>1,70</item>
+			<item ID="6" name="5 let p.a."	>1,54</item>
+		</folder>
+		<folder ID="2" name="simu_port_let" count="8">
+			<item ID="1" name="2003"	>1,40</item>
+			<item ID="2" name="2004"	>2,54</item>
+			<item ID="3" name="2005"	>2,10</item>
+			<item ID="4" name="2006"	>1,41</item>
+			<item ID="5" name="2007"	>0,68</item>
+			<item ID="6" name="2008"	>-0,66</item>
+			<item ID="7" name="2009"	>3,75</item>
+			<item ID="8" name="2010"	>1,93</item>
+		</folder>
+		<folder	ID="3" name="slozeni_fondy"	count="4">
+			<item	ID="1"	name="Pioneer – Sporokonto"							>40,00</item>
+			<item	ID="2"	name="ING (L) Flex Český fond peněžního trhu"		>35,00</item>
+			<item	ID="3"	name="Pioneer – obligační fond"						>10,00</item>
+			<item	ID="4"	name="ING International Český fond obligací"		>15,00</item>
+		</folder>
+		<folder	ID="4" name="slozeni_aktiv" count="8">
+			<item	ID="1"	name="Peněžní trh"					empty="no"		>75,00</item>
+			<item	ID="2"	name="Dluhopisy"					empty="no"		>25,00</item>
+			<item	ID="3"	name="Dluhopisy s vysokým výnosem"	empty="yes"		>0,00</item>
+			<item	ID="4"	name="Akcie Evropa a Sev. Amerika"	empty="yes"		>0,00</item>
+			<item	ID="5"	name="Akcie východní Evropa"		empty="yes"		>0,00</item>
+			<item	ID="6"	name="Akcie rozvíjející se trhy"	empty="yes"		>0,00</item>
+			<item	ID="7"	name="Komodity"						empty="yes"		>0,00</item>
+			<item	ID="8"	name="Aktivně řízené fondy"			empty="yes"		>0,00</item>
+		</folder>
+		<folder ID="5" name="slozeni_spravce" count="2">
+			<item ID="1" name="Pioneer"	>50,00</item>
+			<item ID="2" name="ING"		>50,00</item>
+		</folder>
+		<folder ID="6" name="profil" count="4">
+			<item ID="1">Klient pravděpodobně s ohledem na své předchozí znalosti a zkušenosti dává přednost stabilitě investice a jistotě před dlouhodobě dosažitelnými budoucími výnosy.</item>
+			<item ID="2">Když se rozhodne investovat, pak se obvykle snaží minimalizovat riziko potenciální ztráty. Pokles hodnoty investice by zřejmě nesl těžce a s největší pravděpodobností by zareagoval odkupem.</item>
+			<item ID="3">Většinu svých prostředků má velmi často umístěnu v klasických bankovních produktech, které jsou likvidní a umožňují mu tak téměř okamžitý přístup k financím pro případ jakýchkoliv (plánovaných i neplánovaných) budoucích potřeb.</item>
+			<item ID="4">V případě zainvestování je žádoucí velmi častý kontakt s finančním poradcem, zvláště během negativního cyklu a volatility, kdy je třeba speciálního přístupu.</item>
+		</folder>
+		<folder ID="7" name="poznamky" count="4">
+			<item ID="1" bold="no">1. Viz § 17 vyhlášky České národní banky č.303/2010 Sb.</item>
+			<item ID="2" bold="yes">Dané údaje se týkají simulované výkonnosti v minulosti. Výkonnost v minulosti není spolehlivým ukazatelem budoucí výkonnosti.</item>
+			<item ID="3" bold="no">Zveřejňované ekonomické údaje o výkonnosti fondů nereflektují vliv skutečných provizí, odměn a dalších poplatků hrazených fondem. Struktura poplatků souvisejících s konkrétní investicí plyne z příslušného prospektu (statutu).</item>
+			<item ID="4" bold="no">Zdroj dat: Pioneer Investments</item>
+		</folder>
+	</mix>
+
+	<mix ID="2" type="Velmi konzervativní portfolio" color="color: rgb(255, 255, 255); background-color: rgb(119, 71, 13);">
+        <price_list>
+            <price ID="1">1,00</price>
+            <price ID="2">0,90</price>
+            <price ID="3">0,80</price>
+        </price_list>
+		<folder ID="1" name="simu_port" count="6">
+			<item ID="1" name="YTD"			>0,87</item>
+			<item ID="2" name="1 měsíc"		>-0,06</item>
+			<item ID="3" name="6 měsíců"	>0,87</item>
+			<item ID="4" name="1 rok"		>1,89</item>
+			<item ID="5" name="3 roky p.a."	>2,40</item>
+			<item ID="6" name="5 let p.a."	>1,91</item>
+		</folder>
+		<folder ID="2" name="simu_port_let" count="8">
+			<item ID="1" name="2003"	>N/A</item>
+			<item ID="2" name="2004"	>3,46</item>
+			<item ID="3" name="2005"	>2,67</item>
+			<item ID="4" name="2006"	>1,41</item>
+			<item ID="5" name="2007"	>0,39</item>
+			<item ID="6" name="2008"	>0,22</item>
+			<item ID="7" name="2009"	>4,10</item>
+			<item ID="8" name="2010"	>2,16</item>
+		</folder>
+		<folder	ID="3" name="slozeni_fondy"	count="5">
+			<item	ID="1"	name="Pioneer – Sporokonto"							>30,00</item>
+			<item	ID="2"	name="ING (L) Flex Český fond peněžního trhu"		>30,00</item>
+			<item	ID="3"	name="ING International Český fond obligaci"		>20,00</item>
+			<item	ID="4"	name="Pioneer – obligační fond"						>10,00</item>
+			<item	ID="5"	name="Pioneer – obligační plus"						>10,00</item>
+		</folder>
+		<folder		ID="4"	name="slozeni_aktiv"	count="8">
+			<item	ID="1"	name="Peněžní trh"					empty="no"		>60,00</item>
+			<item	ID="2"	name="Dluhopisy"					empty="no"		>40,00</item>
+			<item	ID="3"	name="Dluhopisy s vysokým výnosem"	empty="yes"		>0,00</item>
+			<item	ID="4"	name="Akcie Evropa a Sev. Amerika"	empty="yes"		>0,00</item>
+			<item	ID="5"	name="Akcie východní Evropa"		empty="yes"		>0,00</item>
+			<item	ID="6"	name="Akcie rozvíjející se trhy"	empty="yes"		>0,00</item>
+			<item	ID="7"	name="Komodity"						empty="yes"		>0,00</item>
+			<item	ID="8"	name="Aktivně řízené fondy"			empty="yes"		>0,00</item>
+		</folder>
+		<folder ID="5" name="slozeni_spravce" count="2">
+			<item ID="1" name="Pioneer"	>50,00</item>
+			<item ID="2" name="ING"		>50,00</item>
+		</folder>
+		<folder ID="6" name="profil" count="4">
+			<item ID="1">Klient pravděpodobně s ohledem na své předchozí znalosti a zkušenosti dává přednost stabilitě investice a jistotě před dlouhodobě dosažitelnými budoucími výnosy.</item>
+			<item ID="2">Když se rozhodne investovat, pak se obvykle snaží minimalizovat riziko potenciální ztráty. Pokles hodnoty investice by zřejmě nesl těžce a s největší pravděpodobností by zareagoval odkupem.</item>
+			<item ID="3">Většinu svých prostředků má velmi často umístěnu v klasických bankovních produktech, které jsou likvidní a umožňují mu tak téměř okamžitý přístup k financím pro případ jakýchkoliv (plánovaných i neplánovaných) budoucích potřeb.</item>
+			<item ID="4">V případě zainvestování je žádoucí velmi častý kontakt s finančním poradcem, zvláště během negativního cyklu a volatility, kdy je třeba speciálního přístupu.</item>
+		</folder>
+		<folder ID="7" name="poznamky" count="5">
+			<item ID="1" bold="no">1. Kvůli krátké časové řadě hodnot byl fond Pioneer – obligační plus nahrazen ve výpočtu výkonnosti v tabulkové a grafické části svým kompozitním benchmarkem.</item>
+			<item ID="2" bold="no">2. Viz § 17 vyhlášky České národní banky č.303/2010 Sb.</item>
+			<item ID="3" bold="yes">Dané údaje se týkají simulované výkonnosti v minulosti. Výkonnost v minulosti není spolehlivým ukazatelem budoucí výkonnosti.</item>
+			<item ID="4" bold="no">Zveřejňované ekonomické údaje o výkonnosti fondů nereflektují vliv skutečných provizí, odměn a dalších poplatků hrazených fondem. Struktura poplatků souvise- jících s konkrétní investicí plyne z příslušného prospektu (statutu).</item>
+			<item ID="5" bold="no">Zdroj dat: Pioneer Investments</item>
+		</folder>
+	</mix>
+	
+	<mix ID="3" type="Konzervativní portfolio" color="color: rgb(255, 255, 255); background-color: rgb(0, 95, 140);">
+        <price_list>
+            <price ID="1">1,10</price>
+            <price ID="2">1,00</price>
+            <price ID="3">0,90</price>
+        </price_list>
+        <folder ID="1" name="simu_port" count="6">
+			<item ID="1" name="YTD"			>0,51</item>
+			<item ID="2" name="1 měsíc"		>-0,16</item>
+			<item ID="3" name="6 měsíců"	>0,51</item>
+			<item ID="4" name="1 rok"		>1,40</item>
+			<item ID="5" name="3 roky p.a."	>3,14</item>
+			<item ID="6" name="5 let p.a."	>N/A</item>
+		</folder>
+		<folder ID="2" name="simu_port_let" count="8">
+			<item ID="1" name="2003"	>N/A</item>
+			<item ID="2" name="2004"	>N/A</item>
+			<item ID="3" name="2005"	>N/A</item>
+			<item ID="4" name="2006"	>N/A</item>
+			<item ID="5" name="2007"	>0,06</item>
+			<item ID="6" name="2008"	>0,37</item>
+			<item ID="7" name="2009"	>5,06</item>
+			<item ID="8" name="2010"	>2,95</item>
+		</folder>
+		<folder	ID="3" name="slozeni_fondy"	count="5">
+			<item	ID="1"	name="Pioneer – Sporokonto"							>35,00</item>
+			<item	ID="2"	name="ING (L) Flex Český fond peněžního trhu"		>25,00</item>
+			<item	ID="3"	name="ING International Český fond obligaci"		>20,00</item>
+			<item	ID="4"	name="Pioneer – obligační fond"						>15,00</item>
+			<item	ID="5"	name="Templeton Global Total Return Fund"			>5,00</item>
+		</folder>
+		<folder		ID="4"	name="slozeni_aktiv"	count="8">
+			<item	ID="1"	name="Peněžní trh"					empty="no"		>60,00</item>
+			<item	ID="2"	name="Dluhopisy"					empty="no"		>35,00</item>
+			<item	ID="3"	name="Dluhopisy s vysokým výnosem"	empty="yes"		>0,00</item>
+			<item	ID="4"	name="Akcie Evropa a Sev. Amerika"	empty="yes"		>0,00</item>
+			<item	ID="5"	name="Akcie východní Evropa"		empty="yes"		>0,00</item>
+			<item	ID="6"	name="Akcie rozvíjející se trhy"	empty="yes"		>0,00</item>
+			<item	ID="7"	name="Komodity"						empty="yes"		>0,00</item>
+			<item	ID="8"	name="Aktivně řízené fondy"			empty="no"		>5,00</item>
+		</folder>
+		<folder ID="5" name="slozeni_spravce" count="3">
+			<item ID="1" name="Pioneer"	>50,00</item>
+			<item ID="2" name="ING"		>45,00</item>
+			<item ID="3" name="Franklin Templeton">5,00</item>
+		</folder>
+		<folder ID="6" name="profil" count="4">
+			<item ID="1">Klient pravděpodobně s ohledem na své předchozí znalosti a zkušenosti dává přednost stabilitě investice a jistotě před dlouhodobě dosažitelnými budoucími výnosy.</item>
+			<item ID="2">Když se rozhodne investovat, pak se obvykle snaží minimalizovat riziko potenciální ztráty. Pokles hodnoty investice by zřejmě nesl těžce a s největší pravděpodobností by zareagoval odkupem.</item>
+			<item ID="3">Většinu svých prostředků má velmi často umístěnu v klasických bankovních produktech, které jsou likvidní a umožňují mu tak téměř okamžitý přístup k financím pro případ jakýchkoliv (plánovaných i neplánovaných) budoucích potřeb.</item>
+			<item ID="4">V případě zainvestování je žádoucí velmi častý kontakt s finančním poradcem, zvláště během negativního cyklu a volatility, kdy je třeba speciálního přístupu.</item>
+		</folder>
+		<folder ID="7" name="poznamky" count="5">
+			<item ID="1" bold="no">1. Viz § 17 vyhlášky České národní banky č.303/2010 Sb.</item>
+			<item ID="2" bold="yes">Dané údaje se týkají simulované výkonnosti v minulosti. Výkonnost v minulosti není spolehlivým ukazatelem budoucí výkonnosti.</item>
+			<item ID="3" bold="no">2.Hodnoty jsou uváděny od data společné existence všech fondů v portfoliu.</item>
+			<item ID="4" bold="no">Zveřejňované ekonomické údaje o výkonnosti fondů nereflektují vliv skutečných provizí, odměn a dalších poplatků hrazených fondem. Struktura poplatků souvise- jících s konkrétní investicí plyne z příslušného prospektu (statutu).</item>
+			<item ID="5" bold="no">Zdroj dat: Pioneer Investments</item>
+		</folder>
+	</mix>
+	
+	<mix ID="4" type="Konzervativní portfolio" color="color: rgb(255, 255, 255); background-color: rgb(0, 95, 140);">
+        <price_list>
+            <price ID="1">1,40</price>
+            <price ID="2">1,20</price>
+            <price ID="3">1,00</price>
+        </price_list>
+        <folder ID="1" name="simu_port" count="6">
+			<item ID="1" name="YTD"			>0,56</item>
+			<item ID="2" name="1 měsíc"		>-0,30</item>
+			<item ID="3" name="6 měsíců"	>0,56</item>
+			<item ID="4" name="1 rok"		>2,16</item>
+			<item ID="5" name="3 roky p.a."	>3,59</item>
+			<item ID="6" name="5 let p.a."	>N/A</item>
+		</folder>
+		<folder ID="2" name="simu_port_let" count="8">
+			<item ID="1" name="2003"	>N/A</item>
+			<item ID="2" name="2004"	>N/A</item>
+			<item ID="3" name="2005"	>N/A</item>
+			<item ID="4" name="2006"	>N/A</item>
+			<item ID="5" name="2007"	>0,55</item>
+			<item ID="6" name="2008"	>-2,15</item>
+			<item ID="7" name="2009"	>7,18</item>
+			<item ID="8" name="2010"	>3,39</item>
+		</folder>
+		<folder	ID="3" name="slozeni_fondy"	count="7">
+			<item	ID="1"	name="Pioneer – Sporokonto"							>30,00</item>
+			<item	ID="2"	name="ING (L) Flex Český fond peněžního trhu"		>20,00</item>
+			<item	ID="3"	name="ING International Český fond obligaci"		>20,00</item>
+			<item	ID="4"	name="Pioneer – obligační fond"						>10,00</item>
+			<item	ID="5"	name="Pionner – obligační plus"						>10,00</item>
+			<item	ID="6"	name="ING International Český akciový fond"			>5,00</item>
+			<item	ID="7"	name="Templeton Global Total Return Fund"			>5,00</item>
+		</folder>
+		<folder		ID="4"	name="slozeni_aktiv"	count="8">
+			<item	ID="1"	name="Peněžní trh"					empty="no"		>50,00</item>
+			<item	ID="2"	name="Dluhopisy"					empty="no"		>40,00</item>
+			<item	ID="3"	name="Dluhopisy s vysokým výnosem"	empty="yes"		>0,00</item>
+			<item	ID="4"	name="Akcie Evropa a Sev. Amerika"	empty="yes"		>0,00</item>
+			<item	ID="5"	name="Akcie východní Evropa"		empty="no"		>5,00</item>
+			<item	ID="6"	name="Akcie rozvíjející se trhy"	empty="yes"		>0,00</item>
+			<item	ID="7"	name="Komodity"						empty="yes"		>0,00</item>
+			<item	ID="8"	name="Aktivně řízené fondy"			empty="no"		>5,00</item>
+		</folder>
+		<folder ID="5" name="slozeni_spravce" count="3">
+			<item ID="1" name="Pioneer"	>50,00</item>
+			<item ID="2" name="ING"		>45,00</item>
+			<item ID="3" name="Franklin Templeton">5,00</item>
+		</folder>
+		<folder ID="6" name="profil" count="4">
+			<item ID="1">Klient pravděpodobně s ohledem na své předchozí znalosti a zkušenosti dává přednost stabilitě investice a jistotě před dlouhodobě dosažitelnými budoucími výnosy.</item>
+			<item ID="2">Když se rozhodne investovat, pak se obvykle snaží minimalizovat riziko potenciální ztráty. Pokles hodnoty investice by zřejmě nesl těžce a s největší pravděpodobností by zareagoval odkupem.</item>
+			<item ID="3">Většinu svých prostředků má velmi často umístěnu v klasických bankovních produktech, které jsou likvidní a umožňují mu tak téměř okamžitý přístup k financím pro případ jakýchkoliv (plánovaných i neplánovaných) budoucích potřeb.</item>
+			<item ID="4">V případě zainvestování je žádoucí velmi častý kontakt s finančním poradcem, zvláště během negativního cyklu a volatility, kdy je třeba speciálního přístupu.</item>
+		</folder>
+		<folder ID="7" name="poznamky" count="6">
+			<item ID="2" bold="no">1. Kvůli krátké časové řadě hodnot byl fond Pioneer – obligační plus nahrazen ve výpočtu výkonnosti v tabulkové a grafické části svým kompozitním benchmarkem.</item>
+			<item ID="2" bold="no">2. Viz § 17 vyhlášky České národní banky č.303/2010 Sb.</item>
+			<item ID="3" bold="yes">Dané údaje se týkají simulované výkonnosti v minulosti. Výkonnost v minulosti není spolehlivým ukazatelem budoucí výkonnosti.</item>
+			<item ID="4" bold="no">3. Hodnoty jsou uváděny od data společné existence všech fondů v portfoliu.</item>
+			<item ID="5" bold="no">Zveřejňované ekonomické údaje o výkonnosti fondů nereflektují vliv skutečných provizí, odměn a dalších poplatků hrazených fondem. Struktura poplatků souvise- jících s konkrétní investicí plyne z příslušného prospektu (statutu).</item>
+			<item ID="6" bold="no">Zdroj dat: Pioneer Investments</item>
+		</folder>
+	</mix>
+	
+	<mix ID="5" type="Konzervativní portfolio" color="color: rgb(255, 255, 255); background-color: rgb(0, 95, 140);">
+        <price_list>
+            <price ID="1">1,50</price>
+            <price ID="2">1,30</price>
+            <price ID="3">1,10</price>
+        </price_list>
+		<folder ID="1" name="simu_port" count="6">
+			<item ID="1" name="YTD"			>0,66</item>
+			<item ID="2" name="1 měsíc"		>-0,30</item>
+			<item ID="3" name="6 měsíců"	>0,66</item>
+			<item ID="4" name="1 rok"		>2,40</item>
+			<item ID="5" name="3 roky p.a."	>3,67</item>
+			<item ID="6" name="5 let p.a."	>N/A</item>
+		</folder>
+		<folder ID="2" name="simu_port_let" count="8">
+			<item ID="1" name="2003"	>N/A</item>
+			<item ID="2" name="2004"	>N/A</item>
+			<item ID="3" name="2005"	>N/A</item>
+			<item ID="4" name="2006"	>N/A</item>
+			<item ID="5" name="2007"	>-0,25</item>
+			<item ID="6" name="2008"	>-1,39</item>
+			<item ID="7" name="2009"	>6,52</item>
+			<item ID="8" name="2010"	>3,52</item>
+		</folder>
+		<folder	ID="3" name="slozeni_fondy"	count="7">
+			<item	ID="1"	name="ING International Český fond obligaci"		>30,00</item>
+			<item	ID="2"	name="Pioneer – Sporokonto"							>25,00</item>
+			<item	ID="3"	name="ING (L) Flex Český fond peněžního trhu"		>15,00</item>
+			<item	ID="4"	name="Pioneer – obligační fond"						>10,00</item>
+			<item	ID="5"	name="Pionner – obligační plus"						>10,00</item>
+			<item	ID="6"	name="Pioneer – akciový fond"						>5,00</item>
+			<item	ID="7"	name="Templeton Global Total Return Fund"			>5,00</item>
+		</folder>
+		<folder		ID="4"	name="slozeni_aktiv"	count="8">
+			<item	ID="1"	name="Peněžní trh"					empty="no"		>40,00</item>
+			<item	ID="2"	name="Dluhopisy"					empty="no"		>50,00</item>
+			<item	ID="3"	name="Dluhopisy s vysokým výnosem"	empty="yes"		>0,00</item>
+			<item	ID="4"	name="Akcie Evropa a Sev. Amerika"	empty="no"		>5,00</item>
+			<item	ID="5"	name="Akcie východní Evropa"		empty="yes"		>0,00</item>
+			<item	ID="6"	name="Akcie rozvíjející se trhy"	empty="yes"		>0,00</item>
+			<item	ID="7"	name="Komodity"						empty="yes"		>0,00</item>
+			<item	ID="8"	name="Aktivně řízené fondy"			empty="no"		>5,00</item>
+		</folder>
+		<folder ID="5" name="slozeni_spravce" count="3">
+			<item ID="1" name="Pioneer"	>50,00</item>
+			<item ID="2" name="ING"		>45,00</item>
+			<item ID="3" name="Franklin Templeton">5,00</item>
+		</folder>
+		<folder ID="6" name="profil" count="4">
+			<item ID="1">Klient pravděpodobně s ohledem na své předchozí znalosti a zkušenosti dává přednost stabilitě investice a jistotě před dlouhodobě dosažitelnými budoucími výnosy.</item>
+			<item ID="2">Když se rozhodne investovat, pak se obvykle snaží minimalizovat riziko potenciální ztráty. Pokles hodnoty investice by zřejmě nesl těžce a s největší pravděpodobností by zareagoval odkupem.</item>
+			<item ID="3">Většinu svých prostředků má velmi často umístěnu v klasických bankovních produktech, které jsou likvidní a umožňují mu tak téměř okamžitý přístup k financím pro případ jakýchkoliv (plánovaných i neplánovaných) budoucích potřeb.</item>
+			<item ID="4">V případě zainvestování je žádoucí velmi častý kontakt s finančním poradcem, zvláště během negativního cyklu a volatility, kdy je třeba speciálního přístupu.</item>
+		</folder>
+		<folder ID="7" name="poznamky" count="6">
+			<item ID="2" bold="no">1. Kvůli krátké časové řadě hodnot byl fond Pioneer – obligační plus nahrazen ve výpočtu výkonnosti v tabulkové a grafické části svým kompozitním benchmarkem.</item>
+			<item ID="2" bold="no">2. Viz § 17 vyhlášky České národní banky č.303/2010 Sb.</item>
+			<item ID="3" bold="yes">Dané údaje se týkají simulované výkonnosti v minulosti. Výkonnost v minulosti není spolehlivým ukazatelem budoucí výkonnosti.</item>
+			<item ID="4" bold="no">3. Hodnoty jsou uváděny od data společné existence všech fondů v portfoliu.</item>
+			<item ID="5" bold="no">Zveřejňované ekonomické údaje o výkonnosti fondů nereflektují vliv skutečných provizí, odměn a dalších poplatků hrazených fondem. Struktura poplatků souvise- jících s konkrétní investicí plyne z příslušného prospektu (statutu).</item>
+			<item ID="6" bold="no">Zdroj dat: Pioneer Investments</item>
+		</folder>
+	</mix>
+	
+	<mix ID="6" type="Konzervativní portfolio" color="color: rgb(255, 255, 255); background-color: rgb(0, 95, 140);">
+        <price_list>
+            <price ID="1">2,00</price>
+            <price ID="2">1,80</price>
+            <price ID="3">1,60</price>
+        </price_list>
+		<folder ID="1" name="simu_port" count="6">
+			<item ID="1" name="YTD"			>0,65</item>
+			<item ID="2" name="1 měsíc"		>-0,41</item>
+			<item ID="3" name="6 měsíců"	>0,65</item>
+			<item ID="4" name="1 rok"		>2,66</item>
+			<item ID="5" name="3 roky p.a."	>4,00</item>
+			<item ID="6" name="5 let p.a."	>N/A</item>
+		</folder>
+		<folder ID="2" name="simu_port_let" count="8">
+			<item ID="1" name="2003"	>N/A</item>
+			<item ID="2" name="2004"	>N/A</item>
+			<item ID="3" name="2005"	>N/A</item>
+			<item ID="4" name="2006"	>N/A</item>
+			<item ID="5" name="2007"	>-0,12</item>
+			<item ID="6" name="2008"	>-2,81</item>
+			<item ID="7" name="2009"	>7,22</item>
+			<item ID="8" name="2010"	>3,95</item>
+		</folder>
+		<folder	ID="3" name="slozeni_fondy"	count="7">
+			<item	ID="1"	name="ING International Český fond obligaci"		>33,00</item>
+			<item	ID="2"	name="Pioneer – Sporokonto"							>27,00</item>
+			<item	ID="3"	name="Pioneer – obligační fond"						>15,00</item>
+			<item	ID="4"	name="Pionner – obligační plus"						>10,00</item>
+			<item	ID="5"	name="Pioneer – akciový fond"						>6,00</item>
+			<item	ID="6"	name="Templeton Global Total Return Fund"			>5,00</item>
+			<item	ID="7"	name="ING International Český akciový fond"			>4,00</item>
+		</folder>
+		<folder		ID="4"	name="slozeni_aktiv"	count="8">
+			<item	ID="1"	name="Peněžní trh"					empty="no"		>27,00</item>
+			<item	ID="2"	name="Dluhopisy"					empty="no"		>58,00</item>
+			<item	ID="3"	name="Dluhopisy s vysokým výnosem"	empty="yes"		>0,00</item>
+			<item	ID="4"	name="Akcie Evropa a Sev. Amerika"	empty="no"		>6,00</item>
+			<item	ID="5"	name="Akcie východní Evropa"		empty="no"		>4,00</item>
+			<item	ID="6"	name="Akcie"						empty="yes"		>0,00</item>
+			<item	ID="7"	name="Komodity"						empty="yes"		>0,00</item>
+			<item	ID="8"	name="Aktivně řízené fondy"			empty="no"		>5,00</item>
+		</folder>
+		<folder ID="5" name="slozeni_spravce" count="3">
+			<item ID="1" name="Pioneer"	>58,00</item>
+			<item ID="2" name="ING"		>37,00</item>
+			<item ID="3" name="Franklin Templeton">5,00</item>
+		</folder>
+		<folder ID="6" name="profil" count="4">
+			<item ID="1">Klient si pravděpodobně vysoce cení likvidity, avšak je ochoten začít přemýšlet o dlouhodobějším investování, neboť si je vědom možností atraktivnějšího zhodnocení.</item>
+			<item ID="2">Za tímto účelem se zdá být připraven vzít na sebe nižší až střední riziko, avšak dlouhodobý pokles by jej mohl donutit k nepředvídané reakci.</item>
+			<item ID="3">Klient by mohl být spokojen, má-li dostatek prostředků umístěn v likvidních produktech pro případ neplánovaných výdajů.</item>
+			<item ID="4">V případě zainvestování je žádoucí častější kontakt klienta s finančním poradcem, zvláště během negativního cyklu a volatility, kdy je vhodné klientovi nabídnout individuální přístup.</item>
+		</folder>
+		<folder ID="7" name="poznamky" count="6">
+			<item ID="2" bold="no">1. Kvůli krátké časové řadě hodnot byl fond Pioneer – obligační plus nahrazen ve výpočtu výkonnosti v tabulkové a grafické části svým kompozitním benchmarkem.</item>
+			<item ID="2" bold="no">2. Viz § 17 vyhlášky České národní banky č.303/2010 Sb.</item>
+			<item ID="3" bold="yes">Dané údaje se týkají simulované výkonnosti v minulosti. Výkonnost v minulosti není spolehlivým ukazatelem budoucí výkonnosti.</item>
+			<item ID="4" bold="no">3. Hodnoty jsou uváděny od data společné existence všech fondů v portfoliu.</item>
+			<item ID="5" bold="no">Zveřejňované ekonomické údaje o výkonnosti fondů nereflektují vliv skutečných provizí, odměn a dalších poplatků hrazených fondem. Struktura poplatků souvise- jících s konkrétní investicí plyne z příslušného prospektu (statutu).</item>
+			<item ID="6" bold="no">Zdroj dat: Pioneer Investments</item>
+		</folder>
+	</mix>
+	
+	<mix ID="7" type="Vyvážené portfolio" color="color: rgb(255, 255, 255); background-color: rgb(31, 141, 61);">
+        <price_list>
+            <price ID="1">2,70</price>
+            <price ID="2">2,50</price>
+            <price ID="3">2,30</price>
+        </price_list>
+		<folder ID="1" name="simu_port" count="6">
+			<item ID="1" name="YTD"			>-0,78</item>
+			<item ID="2" name="1 měsíc"		>-1,21</item>
+			<item ID="3" name="6 měsíců"	>-0,78</item>
+			<item ID="4" name="1 rok"		>4,47</item>
+			<item ID="5" name="3 roky p.a."	>5,63</item>
+			<item ID="6" name="5 let p.a."	>N/A</item>
+		</folder>
+		<folder ID="2" name="simu_port_let" count="8">
+			<item ID="1" name="2003"	>N/A</item>
+			<item ID="2" name="2004"	>N/A</item>
+			<item ID="3" name="2005"	>N/A</item>
+			<item ID="4" name="2006"	>N/A</item>
+			<item ID="5" name="2007"	>N/A</item>
+			<item ID="6" name="2008"	>N/A</item>
+			<item ID="7" name="2009"	>18,59</item>
+			<item ID="8" name="2010"	>7,08</item>
+		</folder>
+		<folder	ID="3" name="slozeni_fondy"	count="9">
+			<item	ID="1"	name="ING International Český fond obligaci"	>25,00</item>
+			<item	ID="2"	name="Pioneer – obligační plus"					>20,00</item>
+			<item	ID="3"	name="Pioneer – akciový fond"					>13,00</item>
+			<item	ID="4"	name="Pioneer – obligační fond"					>10,00</item>
+			<item	ID="5"	name="Templeton Global Total Return"			>10,00</item>
+			<item	ID="6"	name="ING International Český akciový fond"		>9,00</item>
+			<item	ID="7"	name="Parvest Bond World High Yield"			>5,00</item>
+			<item	ID="8"	name="Templeton Emerging Markets"				>4,00</item>
+			<item	ID="9"	name="Pioneer funds – Commodity Alpha"			>4,00</item>
+		</folder>
+		<folder		ID="4"	name="slozeni_aktiv"	count="8">
+			<item	ID="1"	name="Peněžní trh"					empty="yes"		>0,00</item>
+			<item	ID="2"	name="Dluhopisy"					empty="no"		>55,00</item>
+			<item	ID="3"	name="Dluhopisy s vysokým výnosem"	empty="no"		>5,00</item>
+			<item	ID="4"	name="Akcie Evropa a Sev. Amerika"	empty="no"		>13,00</item>
+			<item	ID="5"	name="Akcie východní Evropa"		empty="no"		>9,00</item>
+			<item	ID="6"	name="Akcie"						empty="no"		>4,00</item>
+			<item	ID="7"	name="Komodity"						empty="no"		>4,00</item>
+			<item	ID="8"	name="Aktivně řízené fondy"			empty="no"		>10,00</item>
+		</folder>
+		<folder ID="5" name="slozeni_spravce" count="4">
+			<item ID="1" name="Pioneer"				>47,00</item>
+			<item ID="2" name="ING"					>34,00</item>
+			<item ID="3" name="Franklin Templeton"	>14,00</item>
+			<item ID="4" name="Parvest"				>5,00</item>
+		</folder>
+		<folder ID="6" name="profil" count="6">
+			<item ID="1">Klient už má pravděpodobně částečnou zkušenost s investováním do podílových fondů.</item>
+			<item ID="2">Klient s ohledem na své předchozí znalosti a zkušenosti může být ochoten a připraven investovat i vyšší objem finančních prostředků na delší dobu, neboť z hlediska zhodnocení mu nemusí dostačovat klasické bankovní produkty.</item>
+			<item ID="3">V zájmu dosažení atraktivnějších výnosů může být pravděpodobně ochoten podstoupit střední až vyšší riziko.</item>
+			<item ID="4">Pro případ osobních či rodinných nečekaných budoucích výdajů by mohl mít klient zájem disponovat určitým objemem likvidních finančních prostředků.</item>
+			<item ID="5">Klient je pravděpodobně schopen racionálně připustit nutnost investiční disciplíny.</item>
+			<item ID="6">Klient patrně vyžaduje častější kontakt poradce k udržení obvyklých investičních postojů.</item>
+		</folder>
+		<folder ID="7" name="poznamky" count="6">
+			<item ID="2" bold="no">1. Kvůli krátké časové řadě hodnot byl fond Pioneer – obligační plus nahrazen ve výpočtu výkonnosti v tabulkové a grafické části svým kompozitním benchmarkem.</item>
+			<item ID="2" bold="no">2. Viz § 17 vyhlášky České národní banky č.303/2010 Sb.</item>
+			<item ID="3" bold="yes">Dané údaje se týkají simulované výkonnosti v minulosti. Výkonnost v minulosti není spolehlivým ukazatelem budoucí výkonnosti.</item>
+			<item ID="4" bold="no">3. Hodnoty jsou uváděny od data společné existence všech fondů v portfoliu.</item>
+			<item ID="5" bold="no">Zveřejňované ekonomické údaje o výkonnosti fondů nereflektují vliv skutečných provizí, odměn a dalších poplatků hrazených fondem. Struktura poplatků souvise- jících s konkrétní investicí plyne z příslušného prospektu (statutu).</item>
+			<item ID="6" bold="no">Zdroj dat: Pioneer Investments</item>
+		</folder>
+	</mix>
+	
+	<mix ID="8" type="Konzervativní portfolio" color="color: rgb(255, 255, 255); background-color: rgb(0, 95, 140);">
+        <price_list>
+            <price ID="1">2,30</price>
+            <price ID="2">2,10</price>
+            <price ID="3">1,90</price>
+        </price_list>
+		<folder ID="1" name="simu_port" count="6">
+			<item ID="1" name="YTD"			>0,76</item>
+			<item ID="2" name="1 měsíc"		>-0,57</item>
+			<item ID="3" name="6 měsíců"	>0,76</item>
+			<item ID="4" name="1 rok"		>3,80</item>
+			<item ID="5" name="3 roky p.a."	>5,34</item>
+			<item ID="6" name="5 let p.a."	>N/A</item>
+		</folder>
+		<folder ID="2" name="simu_port_let" count="8">
+			<item ID="1" name="2003"	>N/A</item>
+			<item ID="2" name="2004"	>N/A</item>
+			<item ID="3" name="2005"	>N/A</item>
+			<item ID="4" name="2006"	>N/A</item>
+			<item ID="5" name="2007"	>-0,45</item>
+			<item ID="6" name="2008"	>-4,17</item>
+			<item ID="7" name="2009"	>10,23</item>
+			<item ID="8" name="2010"	>4,90</item>
+		</folder>
+		<folder	ID="3" name="slozeni_fondy"	count="7">
+			<item	ID="1"	name="ING International Český fond obligaci"	>35,00</item>
+			<item	ID="2"	name="Pioneer – obligační plus"					>25,00</item>
+			<item	ID="3"	name="Pioneer – obligační fond"					>15,00</item>
+			<item	ID="4"	name="Pioneer – akciový fond"					>7,00</item>
+			<item	ID="5"	name="Templeton Global Total Return"			>7,00</item>
+			<item	ID="6"	name="ING International Český akciový fond"		>6,00</item>
+			<item	ID="7"	name="Pioneer – Sporokonto"						>5,00</item>
+		</folder>
+		<folder		ID="4"	name="slozeni_aktiv"	count="8">
+			<item	ID="1"	name="Peněžní trh"					empty="no"		>5,00</item>
+			<item	ID="2"	name="Dluhopisy"					empty="no"		>75,00</item>
+			<item	ID="3"	name="Dluhopisy s vysokým výnosem"	empty="yes"		>0,00</item>
+			<item	ID="4"	name="Akcie Evropa a Sev. Amerika"	empty="no"		>7,00</item>
+			<item	ID="5"	name="Akcie východní Evropa"		empty="no"		>6,00</item>
+			<item	ID="6"	name="Akcie"						empty="yes"		>0,00</item>
+			<item	ID="7"	name="Komodity"						empty="yes"		>0,00</item>
+			<item	ID="8"	name="Aktivně řízené fondy"			empty="no"		>7,00</item>
+		</folder>
+		<folder ID="5" name="slozeni_spravce" count="3">
+			<item ID="1" name="Pioneer"				>52,00</item>
+			<item ID="2" name="ING"					>41,00</item>
+			<item ID="3" name="Franklin Templeton"	>7,00</item>
+		</folder>
+		<folder ID="6" name="profil" count="4">
+			<item ID="1">Klient si pravděpodobně vysoce cení likvidity, avšak je ochoten začít přemýšlet o dlouhodobějším investování, neboť si je vědom možností atraktivnějšího zhodnocení.</item>
+			<item ID="2">Za tímto účelem se zdá být připraven vzít na sebe nižší až střední riziko, avšak dlouhodobý pokles by jej mohl donutit k nepředvídané reakci.</item>
+			<item ID="3">Klient by mohl být spokojen, má-li dostatek prostředků umístěn v likvidních produktech pro případ neplánovaných výdajů.</item>
+			<item ID="4">V případě zainvestování je žádoucí častější kontakt klienta s finančním poradcem, zvláště během negativního cyklu a volatility, kdy je vhodné klientovi nabídnout individuální přístup.</item>
+		</folder>
+		<folder ID="7" name="poznamky" count="6">
+			<item ID="2" bold="no">1. Kvůli krátké časové řadě hodnot byl fond Pioneer – obligační plus nahrazen ve výpočtu výkonnosti v tabulkové a grafické části svým kompozitním benchmarkem.</item>
+			<item ID="2" bold="no">2. Viz § 17 vyhlášky České národní banky č.303/2010 Sb.</item>
+			<item ID="3" bold="yes">Dané údaje se týkají simulované výkonnosti v minulosti. Výkonnost v minulosti není spolehlivým ukazatelem budoucí výkonnosti.</item>
+			<item ID="4" bold="no">3. Hodnoty jsou uváděny od data společné existence všech fondů v portfoliu.</item>
+			<item ID="5" bold="no">Zveřejňované ekonomické údaje o výkonnosti fondů nereflektují vliv skutečných provizí, odměn a dalších poplatků hrazených fondem. Struktura poplatků souvise- jících s konkrétní investicí plyne z příslušného prospektu (statutu).</item>
+			<item ID="6" bold="no">Zdroj dat: Pioneer Investments</item>
+		</folder>
+	</mix>
+	
+	<mix ID="9" type="Vyvážené portfolio" color="color: rgb(255, 255, 255); background-color: rgb(31, 141, 61);">
+        <price_list>
+            <price ID="1">2,70</price>
+            <price ID="2">2,50</price>
+            <price ID="3">2,30</price>
+        </price_list>
+		<folder ID="1" name="simu_port" count="6">
+			<item ID="1" name="YTD"			>-1,03</item>
+			<item ID="2" name="1 měsíc"		>-1,26</item>
+			<item ID="3" name="6 měsíců"	>-1,06</item>
+			<item ID="4" name="1 rok"		>3,64</item>
+			<item ID="5" name="3 roky p.a."	>7,01</item>
+			<item ID="6" name="5 let p.a."	>N/A</item>
+		</folder>
+		<folder ID="2" name="simu_port_let" count="8">
+			<item ID="1" name="2003"	>N/A</item>
+			<item ID="2" name="2004"	>N/A</item>
+			<item ID="3" name="2005"	>N/A</item>
+			<item ID="4" name="2006"	>N/A</item>
+			<item ID="5" name="2007"	>N/A</item>
+			<item ID="6" name="2008"	>N/A</item>
+			<item ID="7" name="2009"	>20,35</item>
+			<item ID="8" name="2010"	>8,32</item>
+		</folder>
+		<folder	ID="3" name="slozeni_fondy"	count="7">
+			<item	ID="1"	name="ING International Český fond obligaci"	>30,00</item>
+			<item	ID="2"	name="Pioneer – obligační plus"					>20,00</item>
+			<item	ID="3"	name="Templeton Global Total Return"			>16,00</item>
+			<item	ID="4"	name="Pioneer – akciový fond"					>14,00</item>
+			<item	ID="5"	name="ING International Český akciový fond"		>9,00</item>
+			<item	ID="6"	name="Templeton Emerging Markets"				>6,00</item>
+			<item	ID="7"	name="Parvest Bond World High Yield"			>5,00</item>
+		</folder>
+		<folder		ID="4"	name="slozeni_aktiv"	count="8">
+			<item	ID="1"	name="Peněžní trh"					empty="yes"	>0,00</item>
+			<item	ID="2"	name="Dluhopisy"					empty="no"	>50,00</item>
+			<item	ID="3"	name="Dluhopisy s vysokým výnosem"	empty="no"	>5,00</item>
+			<item	ID="4"	name="Akcie Evropa a Sev. Amerika"	empty="no"	>14,00</item>
+			<item	ID="5"	name="Akcie východní Evropa"		empty="no"	>9,00</item>
+			<item	ID="6"	name="Akcie"						empty="no"	>6,00</item>
+			<item	ID="7"	name="Komodity"						empty="yes"	>0,00</item>
+			<item	ID="8"	name="Aktivně řízené fondy"			empty="no"	>16,00</item>
+		</folder>
+		<folder ID="5" name="slozeni_spravce" count="3">
+			<item ID="1" name="Pioneer"				>34,00</item>
+			<item ID="2" name="ING"					>39,00</item>
+			<item ID="3" name="Franklin Templeton"	>22,00</item>
+			<item ID="4" name="Parvest"				>5,00</item>
+		</folder>
+		<folder ID="6" name="profil" count="6">
+			<item ID="1">Klient už má pravděpodobně částečnou zkušenost s investováním do podílových fondů.</item>
+			<item ID="2">Klient s ohledem na své předchozí znalosti a zkušenosti může být ochoten a připraven investovat i vyšší objem finančních prostředků na delší dobu, neboť z hlediska zhodnocení mu nemusí dostačovat klasické bankovní produkty.</item>
+			<item ID="3">V zájmu dosažení atraktivnějších výnosů může být pravděpodobně ochoten podstoupit střední až vyšší riziko.</item>
+			<item ID="4">Pro případ osobních či rodinných nečekaných budoucích výdajů by mohl mít klient zájem disponovat určitým objemem likvidních finančních prostředků.</item>
+			<item ID="5">Klient je pravděpodobně schopen racionálně připustit nutnost investiční disciplíny.</item>
+			<item ID="6">Klient patrně vyžaduje častější kontakt poradce k udržení obvyklých investičních postojů.</item>
+		</folder>
+		<folder ID="7" name="poznamky" count="6">
+			<item ID="2" bold="no">1. Kvůli krátké časové řadě hodnot byl fond Pioneer – obligační plus nahrazen ve výpočtu výkonnosti v tabulkové a grafické části svým kompozitním benchmarkem.</item>
+			<item ID="2" bold="no">2. Viz § 17 vyhlášky České národní banky č.303/2010 Sb.</item>
+			<item ID="3" bold="yes">Dané údaje se týkají simulované výkonnosti v minulosti. Výkonnost v minulosti není spolehlivým ukazatelem budoucí výkonnosti.</item>
+			<item ID="4" bold="no">3. Hodnoty jsou uváděny od data společné existence všech fondů v portfoliu.</item>
+			<item ID="5" bold="no">Zveřejňované ekonomické údaje o výkonnosti fondů nereflektují vliv skutečných provizí, odměn a dalších poplatků hrazených fondem. Struktura poplatků souvise- jících s konkrétní investicí plyne z příslušného prospektu (statutu).</item>
+			<item ID="6" bold="no">Zdroj dat: Pioneer Investments</item>
+		</folder>
+	</mix>
+	
+	<mix ID="10" type="Dynamické portfolio" color="color: rgb(255, 255, 255); background-color: rgb(132, 2, 97);">
+        <price_list>
+            <price ID="1">3,30</price>
+            <price ID="2">3,00</price>
+            <price ID="3">2,70</price>
+        </price_list>
+		<folder ID="1" name="simu_port" count="6">
+			<item ID="1" name="YTD"			>-2,55</item>
+			<item ID="2" name="1 měsíc"		>-1,90</item>
+			<item ID="3" name="6 měsíců"	>-2,55</item>
+			<item ID="4" name="1 rok"		>3,98</item>
+			<item ID="5" name="3 roky p.a."	>6,91</item>
+			<item ID="6" name="5 let p.a."	>N/A</item>
+		</folder>
+		<folder ID="2" name="simu_port_let" count="8">
+			<item ID="1" name="2003"	>N/A</item>
+			<item ID="2" name="2004"	>N/A</item>
+			<item ID="3" name="2005"	>N/A</item>
+			<item ID="4" name="2006"	>N/A</item>
+			<item ID="5" name="2007"	>N/A</item>
+			<item ID="6" name="2008"	>N/A</item>
+			<item ID="7" name="2009"	>28,74</item>
+			<item ID="8" name="2010"	>9,83</item>
+		</folder>
+		<folder	ID="3" name="slozeni_fondy"	count="8">
+			<item	ID="1"	name="Templeton Global Total Return"			>17,00</item>
+			<item	ID="2"	name="Pioneer – obligační plus"					>15,00</item>
+			<item	ID="3"	name="ING International Český akciový fond"		>15,00</item>
+			<item	ID="4"	name="Pioneer – akciový fond"					>14,00</item>
+			<item	ID="5"	name="ING International Český fond obligaci"	>13,00</item>
+			<item	ID="6"	name="Parvest Bond World High Yield"			>12,00</item>
+			<item	ID="7"	name="Templeton Emerging Markets"				>7,00</item>
+			<item	ID="8"	name="Pioneer funds – Commodity Alpha"			>7,00</item>
+		</folder>
+		<folder		ID="4"	name="slozeni_aktiv"	count="8">
+			<item	ID="1"	name="Peněžní trh"					empty="yes"	>0,00</item>
+			<item	ID="2"	name="Dluhopisy"					empty="no"	>28,00</item>
+			<item	ID="3"	name="Dluhopisy s vysokým výnosem"	empty="no"	>12,00</item>
+			<item	ID="4"	name="Akcie Evropa a Sev. Amerika"	empty="no"	>14,00</item>
+			<item	ID="5"	name="Akcie východní Evropa"		empty="no"	>15,00</item>
+			<item	ID="6"	name="Akcie"						empty="no"	>7,00</item>
+			<item	ID="7"	name="Komodity"						empty="no"	>7,00</item>
+			<item	ID="8"	name="Aktivně řízené fondy"			empty="no"	>17,00</item>
+		</folder>
+		<folder ID="5" name="slozeni_spravce" count="4">
+			<item ID="1" name="Pioneer"				>36,00</item>
+			<item ID="2" name="ING"					>28,00</item>
+			<item ID="3" name="Franklin Templeton"	>24,00</item>
+			<item ID="4" name="Parvest"				>12,00</item>
+		</folder>
+		<folder ID="6" name="profil" count="6">
+			<item ID="1">Klient s ohledem na jeho znalosti již zřejmě má zkušenosti s investováním do podílových fondů.</item>
+			<item ID="2">Nebývá ojedinělým jevem, že klient zároveň investuje přímo na burze (prostřednictvím OCP) nebo investuje do nemovitostí.</item>
+			<item ID="3">Klient je zřejmě připraven dlouhodobě rozložit své prostředky do finančních produktů s možným vysokým výnosovým potenciálem, jakož i souvisejícím vysokým rizikem.</item>
+			<item ID="4">V případě dlouhodobějšího poklesu by se pravděpodobně necítil zvlášť překvapen, neboť takové situaci již mohl být v minulosti vystaven.</item>
+			<item ID="5">V likvidních produktech pravděpodobně udržuje pouze nezbytný objem svých finančních prostředků, obvykle na pokrytí okamžitých nebo krátkodobých osobních nebo rodinných potřeb.</item>
+			<item ID="6">Lze usuzovat, že u klienta jsou vzhledem k jeho předchozím znalostem a zkušenostem předpoklady pro zachování investiční disciplíny.</item>
+		</folder>
+		<folder ID="7" name="poznamky" count="6">
+			<item ID="2" bold="no">1. Kvůli krátké časové řadě hodnot byl fond Pioneer – obligační plus nahrazen ve výpočtu výkonnosti v tabulkové a grafické části svým kompozitním benchmarkem.</item>
+			<item ID="2" bold="no">2. Viz § 17 vyhlášky České národní banky č.303/2010 Sb.</item>
+			<item ID="3" bold="yes">Dané údaje se týkají simulované výkonnosti v minulosti. Výkonnost v minulosti není spolehlivým ukazatelem budoucí výkonnosti.</item>
+			<item ID="4" bold="no">3. Hodnoty jsou uváděny od data společné existence všech fondů v portfoliu.</item>
+			<item ID="5" bold="no">Zveřejňované ekonomické údaje o výkonnosti fondů nereflektují vliv skutečných provizí, odměn a dalších poplatků hrazených fondem. Struktura poplatků souvise- jících s konkrétní investicí plyne z příslušného prospektu (statutu).</item>
+			<item ID="6" bold="no">Zdroj dat: Pioneer Investments</item>
+		</folder>
+	</mix>
+	
+	<mix ID="11" type="Konzervativní portfolio" color="color: rgb(255, 255, 255); background-color: rgb(0, 95, 140);">
+        <price_list>
+            <price ID="1">2,80</price>
+            <price ID="2">2,50</price>
+            <price ID="3">2,20</price>
+        </price_list>
+		<folder ID="1" name="simu_port" count="6">
+			<item ID="1" name="YTD"			>-0,06</item>
+			<item ID="2" name="1 měsíc"		>-0,79</item>
+			<item ID="3" name="6 měsíců"	>-0,06</item>
+			<item ID="4" name="1 rok"		>2,18</item>
+			<item ID="5" name="3 roky p.a."	>8,08</item>
+			<item ID="6" name="5 let p.a."	>N/A</item>
+		</folder>
+		<folder ID="2" name="simu_port_let" count="8">
+			<item ID="1" name="2003"	>N/A</item>
+			<item ID="2" name="2004"	>N/A</item>
+			<item ID="3" name="2005"	>N/A</item>
+			<item ID="4" name="2006"	>N/A</item>
+			<item ID="5" name="2007"	>-0,68</item>
+			<item ID="6" name="2008"	>-2,63</item>
+			<item ID="7" name="2009"	>13,58</item>
+			<item ID="8" name="2010"	>6,81</item>
+		</folder>
+		<folder	ID="3" name="slozeni_fondy"	count="5">
+			<item	ID="1"	name="ING International Český fond obligaci"		>35,00</item>
+			<item	ID="2"	name="Templeton Global Total Return"				>20,00</item>
+			<item	ID="3"	name="Pioneer – obligační plus"						>20,00</item>
+			<item	ID="4"	name="Pioneer – obligační fond"						>15,00</item>
+			<item	ID="5"	name="ING International Český akciový fond"			>10,00</item>
+		</folder>
+		<folder		ID="4"	name="slozeni_aktiv"	count="8">
+			<item	ID="1"	name="Peněžní trh"					empty="yes"	>0,00</item>
+			<item	ID="2"	name="Dluhopisy"					empty="no" 	>70,00</item>
+			<item	ID="3"	name="Dluhopisy s vysokým výnosem"	empty="yes"	>0,00</item>
+			<item	ID="4"	name="Akcie Evropa a Sev. Amerika"	empty="yes"	>0,00</item>
+			<item	ID="5"	name="Akcie východní Evropa"		empty="no"	>10,00</item>
+			<item	ID="6"	name="Akcie"						empty="yes"	>0,00</item>
+			<item	ID="7"	name="Komodity"						empty="yes"	>0,00</item>
+			<item	ID="8"	name="Aktivně řízené fondy"			empty="no"	>20,00</item>
+		</folder>
+		<folder ID="5" name="slozeni_spravce" count="3">
+			<item ID="1" name="Pioneer"				>35,00</item>
+			<item ID="2" name="ING"					>45,00</item>
+			<item ID="3" name="Franklin Templeton"	>20,00</item>
+		</folder>
+		<folder ID="6" name="profil" count="4">
+			<item ID="1">Klient si pravděpodobně vysoce cení likvidity, avšak je ochoten začít přemýšlet o dlouhodobějším investování, neboť si je vědom možností atraktivnějšího zhodnocení.</item>
+			<item ID="2">Za tímto účelem se zdá být připraven vzít na sebe nižší až střední riziko, avšak dlouhodobý pokles by jej mohl donutit k nepředvídané reakci.</item>
+			<item ID="3">Klient by mohl být spokojen, má-li dostatek prostředků umístěn v likvidních produktech pro případ neplánovaných výdajů.</item>
+			<item ID="4">V případě zainvestování je žádoucí častější kontakt klienta s finančním poradcem, zvláště během negativního cyklu a volatility, kdy je vhodné klientovi nabídnout individuální přístup.</item>
+		</folder>
+		<folder ID="7" name="poznamky" count="6">
+			<item ID="2" bold="no">1. Kvůli krátké časové řadě hodnot byl fond Pioneer – obligační plus nahrazen ve výpočtu výkonnosti v tabulkové a grafické části svým kompozitním benchmarkem.</item>
+			<item ID="2" bold="no">2. Viz § 17 vyhlášky České národní banky č.303/2010 Sb.</item>
+			<item ID="3" bold="yes">Dané údaje se týkají simulované výkonnosti v minulosti. Výkonnost v minulosti není spolehlivým ukazatelem budoucí výkonnosti.</item>
+			<item ID="4" bold="no">3. Hodnoty jsou uváděny od data společné existence všech fondů v portfoliu.</item>
+			<item ID="5" bold="no">Zveřejňované ekonomické údaje o výkonnosti fondů nereflektují vliv skutečných provizí, odměn a dalších poplatků hrazených fondem. Struktura poplatků souvise- jících s konkrétní investicí plyne z příslušného prospektu (statutu).</item>
+			<item ID="6" bold="no">Zdroj dat: Pioneer Investments</item>
+		</folder>
+	</mix>
+	
+	<mix ID="12" type="Dynamické portfolio" color="color: rgb(255, 255, 255); background-color: rgb(132, 2, 97);">
+        <price_list>
+            <price ID="1">3,50</price>
+            <price ID="2">3,00</price>
+            <price ID="3">2,50</price>
+        </price_list>
+		<folder ID="1" name="simu_port" count="6">
+			<item ID="1" name="YTD"			>-1,96</item>
+			<item ID="2" name="1 měsíc"		>-1,60</item>
+			<item ID="3" name="6 měsíců"	>-1,96</item>
+			<item ID="4" name="1 rok"		>3,24</item>
+			<item ID="5" name="3 roky p.a."	>6,94</item>
+			<item ID="6" name="5 let p.a."	>N/A</item>
+		</folder>
+		<folder ID="2" name="simu_port_let" count="8">
+			<item ID="1" name="2003"	>N/A</item>
+			<item ID="2" name="2004"	>N/A</item>
+			<item ID="3" name="2005"	>N/A</item>
+			<item ID="4" name="2006"	>N/A</item>
+			<item ID="5" name="2007"	>N/A</item>
+			<item ID="6" name="2008"	>N/A</item>
+			<item ID="7" name="2009"	>22,49</item>
+			<item ID="8" name="2010"	>9,03</item>
+		</folder>
+		<folder	ID="3" name="slozeni_fondy"	count="8">
+			<item	ID="1"	name="Pioneer – obligační plus"					>20,00</item>
+			<item	ID="2"	name="Templeton Global Total Return"			>20,00</item>
+			<item	ID="3"	name="ING International Český fond obligaci"	>20,00</item>
+			<item	ID="4"	name="Pioneer – akciový fond"					>16,00</item>
+			<item	ID="5"	name="ING International Český akciový fond"		>10,00</item>
+			<item	ID="6"	name="Parvest Bond World High Yield"			>5,00</item>
+			<item	ID="7"	name="Pioneer funds – Commodity Alpha"			>5,00</item>
+			<item	ID="8"	name="Templeton Emerging Markets"				>4,00</item>
+		</folder>
+		<folder		ID="4"	name="slozeni_aktiv"	count="8">
+			<item	ID="1"	name="Peněžní trh"					empty="yes"	>0,00</item>
+			<item	ID="2"	name="Dluhopisy"					empty="no"	>40,00</item>
+			<item	ID="3"	name="Dluhopisy s vysokým výnosem"	empty="no"	>5,00</item>
+			<item	ID="4"	name="Akcie Evropa a Sev. Amerika"	empty="no"	>16,00</item>
+			<item	ID="5"	name="Akcie východní Evropa"		empty="no"	>10,00</item>
+			<item	ID="6"	name="Akcie"						empty="no"	>4,00</item>
+			<item	ID="7"	name="Komodity"						empty="no"	>5,00</item>
+			<item	ID="8"	name="Aktivně řízené fondy"			empty="no"	>20,00</item>
+		</folder>
+		<folder ID="5" name="slozeni_spravce" count="4">
+			<item ID="1" name="Pioneer"				>41,00</item>
+			<item ID="2" name="ING"					>30,00</item>
+			<item ID="3" name="Franklin Templeton"	>24,00</item>
+			<item ID="4" name="Parvest"				>5,00</item>
+		</folder>
+		<folder ID="6" name="profil" count="6">
+			<item ID="1">Klient s ohledem na jeho znalosti již zřejmě má zkušenosti s investováním do podílových fondů.</item>
+			<item ID="2">Nebývá ojedinělým jevem, že klient zároveň investuje přímo na burze (prostřednictvím OCP) nebo investuje do nemovitostí.</item>
+			<item ID="3">Klient je zřejmě připraven dlouhodobě rozložit své prostředky do finančních produktů s možným vysokým výnosovým potenciálem, jakož i souvisejícím vysokým rizikem.</item>
+			<item ID="4">V případě dlouhodobějšího poklesu by se pravděpodobně necítil zvlášť překvapen, neboť takové situaci již mohl být v minulosti vystaven.</item>
+			<item ID="5">V likvidních produktech pravděpodobně udržuje pouze nezbytný objem svých finančních prostředků, obvykle na pokrytí okamžitých nebo krátkodobých osobních nebo rodinných potřeb.</item>
+			<item ID="6">Lze usuzovat, že u klienta jsou vzhledem k jeho předchozím znalostem a zkušenostem předpoklady pro zachování investiční disciplíny.</item>
+		</folder>
+		<folder ID="7" name="poznamky" count="6">
+			<item ID="2" bold="no">1. Kvůli krátké časové řadě hodnot byl fond Pioneer – obligační plus nahrazen ve výpočtu výkonnosti v tabulkové a grafické části svým kompozitním benchmarkem.</item>
+			<item ID="2" bold="no">2. Viz § 17 vyhlášky České národní banky č.303/2010 Sb.</item>
+			<item ID="3" bold="yes">Dané údaje se týkají simulované výkonnosti v minulosti. Výkonnost v minulosti není spolehlivým ukazatelem budoucí výkonnosti.</item>
+			<item ID="4" bold="no">3. Hodnoty jsou uváděny od data společné existence všech fondů v portfoliu.</item>
+			<item ID="5" bold="no">Zveřejňované ekonomické údaje o výkonnosti fondů nereflektují vliv skutečných provizí, odměn a dalších poplatků hrazených fondem. Struktura poplatků souvise- jících s konkrétní investicí plyne z příslušného prospektu (statutu).</item>
+			<item ID="6" bold="no">Zdroj dat: Pioneer Investments</item>
+		</folder>
+	</mix>
+	
+	<mix ID="13" type="Velmi dynamické portfolio" color="color: rgb(255, 255, 255); background-color: rgb(225, 77, 32);">
+        <price_list>
+            <price ID="1">4,00</price>
+            <price ID="2">3,50</price>
+            <price ID="3">3,00</price>
+        </price_list>
+		<folder ID="1" name="simu_port" count="6">
+			<item ID="1" name="YTD"			>-4,38</item>
+			<item ID="2" name="1 měsíc"		>-2,49</item>
+			<item ID="3" name="6 měsíců"	>-4,38</item>
+			<item ID="4" name="1 rok"		>2,62</item>
+			<item ID="5" name="3 roky p.a."	>7,41</item>
+			<item ID="6" name="5 let p.a."	>N/A</item>
+		</folder>
+		<folder ID="2" name="simu_port_let" count="8">
+			<item ID="1" name="2003"	>N/A</item>
+			<item ID="2" name="2004"	>N/A</item>
+			<item ID="3" name="2005"	>N/A</item>
+			<item ID="4" name="2006"	>N/A</item>
+			<item ID="5" name="2007"	>N/A</item>
+			<item ID="6" name="2008"	>N/A</item>
+			<item ID="7" name="2009"	>34,82</item>
+			<item ID="8" name="2010"	>12,28</item>
+		</folder>
+		<folder	ID="3" name="slozeni_fondy"	count="7">
+			<item	ID="1"	name="Templeton Global Total Return"			>22,00</item>
+			<item	ID="2"	name="ING International Český akciový fond"		>19,00</item>
+			<item	ID="3"	name="Pioneer – akciový fond"					>18,00</item>
+			<item	ID="4"	name="Parvest Bond World High Yield"			>15,00</item>
+			<item	ID="5"	name="Pioneer funds – Commodity Alpha"			>10,00</item>
+			<item	ID="6"	name="Pioneer – obligační plus"					>8,00</item>
+			<item	ID="7"	name="Templeton Emerging Markets"				>8,00</item>
+		</folder>
+		<folder		ID="4"	name="slozeni_aktiv"	count="8">
+			<item	ID="1"	name="Peněžní trh"					empty="yes"	>0,00</item>
+			<item	ID="2"	name="Dluhopisy"					empty="no" 	>8,00</item>
+			<item	ID="3"	name="Dluhopisy s vysokým výnosem"	empty="no"	>15,00</item>
+			<item	ID="4"	name="Akcie Evropa a Sev. Amerika"	empty="no"	>18,00</item>
+			<item	ID="5"	name="Akcie východní Evropa"		empty="no"	>19,00</item>
+			<item	ID="6"	name="Akcie"						empty="no"	>8,00</item>
+			<item	ID="7"	name="Komodity"						empty="no"	>10,00</item>
+			<item	ID="8"	name="Aktivně řízené fondy"			empty="no"	>22,00</item>
+		</folder>
+		<folder ID="5" name="slozeni_spravce" count="4">
+			<item ID="1" name="Pioneer"				>36,00</item>
+			<item ID="2" name="ING"					>19,00</item>
+			<item ID="3" name="Franklin Templeton"	>30,00</item>
+			<item ID="4" name="Parvest"				>15,00</item>
+		</folder>
+		<folder ID="6" name="profil" count="6">
+			<item ID="1">Klient s ohledem na jeho znalosti již zřejmě má zkušenosti s investováním do podílových fondů.</item>
+			<item ID="2">Nebývá ojedinělým jevem, že klient zároveň investuje přímo na burze (prostřednictvím OCP) nebo investuje do nemovitostí.</item>
+			<item ID="3">Klient je zřejmě připraven dlouhodobě rozložit své prostředky do finančních produktů s možným vysokým výnosovým potenciálem, jakož i souvisejícím vysokým rizikem.</item>
+			<item ID="4">V případě dlouhodobějšího poklesu by se pravděpodobně necítil zvlášť překvapen, neboť takové situaci již mohl být v minulosti vystaven.</item>
+			<item ID="5">V likvidních produktech pravděpodobně udržuje pouze nezbytný objem svých finančních prostředků, obvykle na pokrytí okamžitých nebo krátkodobých osobních nebo rodinných potřeb.</item>
+			<item ID="6">Lze usuzovat, že u klienta jsou vzhledem k jeho předchozím znalostem a zkušenostem předpoklady pro zachování investiční disciplíny.</item>
+		</folder>
+		<folder ID="7" name="poznamky" count="6">
+			<item ID="2" bold="no">1. Kvůli krátké časové řadě hodnot byl fond Pioneer – obligační plus nahrazen ve výpočtu výkonnosti v tabulkové a grafické části svým kompozitním benchmarkem.</item>
+			<item ID="2" bold="no">2. Viz § 17 vyhlášky České národní banky č.303/2010 Sb.</item>
+			<item ID="3" bold="yes">Dané údaje se týkají simulované výkonnosti v minulosti. Výkonnost v minulosti není spolehlivým ukazatelem budoucí výkonnosti.</item>
+			<item ID="4" bold="no">3. Hodnoty jsou uváděny od data společné existence všech fondů v portfoliu.</item>
+			<item ID="5" bold="no">Zveřejňované ekonomické údaje o výkonnosti fondů nereflektují vliv skutečných provizí, odměn a dalších poplatků hrazených fondem. Struktura poplatků souvise- jících s konkrétní investicí plyne z příslušného prospektu (statutu).</item>
+			<item ID="6" bold="no">Zdroj dat: Pioneer Investments</item>
+		</folder>
+	</mix>
+</database>
