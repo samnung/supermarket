@@ -1,21 +1,19 @@
+/* !!! UTF-8 !!! 2012-08-14 */
 #include "files_control.h"
 
 files_control::files_control()
 {
 	dir_resources = new QDir(QDir::currentPath());
+
 #ifdef Q_OS_MAC
-//	dir_work = new QDir(QString(QDir::homePath()) + QString(QDir::separator()) + QString("Library") + QString(QDir::separator()) + QString("Application Support") + QString(QDir::separator()) + QString("Supermarket"));
 	dir_resources->cdUp();
 	dir_resources->cd("Resources");
-#else
-//	dir_work = new QDir(QString(QDir::homePath()) + QString(QDir::separator()) + QString("AppData") + QString(QDir::separator()) + QString("Local") + QString(QDir::separator()) + QString("Supermarket"));
+#elif defined Q_OS_WIN
+	dir_resources->cd("resources");
 #endif
-//	dir_apps = new QDir(*dir_work);
-//	dir_apps->cdUp();
-
 	file_actual = new QFile(dir_resources->path() + QDir::separator() + QString(FILE_XML_ACTUAL_NAME));
-	QMessageBox::information(NULL, NULL, file_actual->fileName());
 	xml_actual = new QXmlStreamReader(file_actual);
+
 
 	xml_name_splash_image = new QString;
 	xml_name_info_icon = new QString;

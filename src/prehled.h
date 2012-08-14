@@ -14,10 +14,16 @@ class prehled : public QWidget
 public:
 	explicit prehled(QWidget *parent = 0);
 	~prehled();
-public slots:
+	virtual void closeEvent(QCloseEvent *e)
+	{
+	   emit windowClosing(this);
+	}
 
 private:
 	Ui::prehled *ui_prehled;
+
+signals:
+	void windowClosing(void*);
 
 };
 

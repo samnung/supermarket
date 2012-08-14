@@ -14,7 +14,7 @@ podrobnosti_adv::podrobnosti_adv(files_control *_files)
 
 podrobnosti_adv::~podrobnosti_adv()
 {
-	delete centralwidget;
+/*	delete centralwidget;
 	delete centralWidgetLayout;
 
 	delete horizontalSpacer_left;
@@ -34,7 +34,7 @@ podrobnosti_adv::~podrobnosti_adv()
 	delete verticalSpacer_left_3;
 
 	delete scrollArea;
-	delete scrollAreaWidgetContents;
+	delete scrollAreaWidgetContents;*/
 }
 
 void podrobnosti_adv::setup()

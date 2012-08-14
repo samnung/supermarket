@@ -13,6 +13,8 @@ public:
 private:
 	void setup();
 
+	QWidget *window;
+
 	QGridLayout *layout;
 
 	QFrame *lineV[14];

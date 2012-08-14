@@ -3,6 +3,8 @@
 window_control::window_control(files_control *_files)
 {
 	files = _files;
+	ui_cenik = NULL;
+	ui_prehled = NULL;
 }
 
 void window_control::showMainWindow()
@@ -37,9 +39,16 @@ void window_control::closeMainWindow(void *window)
 
 void window_control::showOAplikaci()
 {
-	if (ui_oaplikaci == NULL) {
-		ui_oaplikaci = new oAplikaci(files);
+	if (ui_oaplikaci != NULL) {
 		ui_oaplikaci->show();
+		ui_oaplikaci->activateWindow();
+	}
+	else {
+		ui_oaplikaci = new oAplikaci(files);
+		if (ui_oaplikaci != NULL) {
+			ui_oaplikaci->show();
+			connect(ui_oaplikaci, SIGNAL(windowClosing(void*)), this, SLOT(closeCenik(void*)));
+		}
 	}
 }
 
@@ -90,21 +99,44 @@ void window_control::closePodrobnostiPlus(void * window)
 
 void window_control::showCenik()
 {
-	if (ui_cenik != NULL)
+	if (ui_cenik != NULL) {
 		ui_cenik->show();
+		ui_cenik->activateWindow();
+	}
 	else {
 		ui_cenik = new cenik(files);
-		if (ui_cenik != NULL)
+		if (ui_cenik != NULL) {
 			ui_cenik->show();
+			connect(ui_cenik, SIGNAL(windowClosing(void*)), this, SLOT(closeCenik(void*)));
+		}
 	}
+}
+void window_control::closeCenik(void *)
+{
+	ui_cenik->close();
+	delete ui_cenik;
+	ui_cenik = NULL;
 }
 
 void window_control::showPrehled()
 {
-	if (ui_prehled == NULL) {
-		ui_prehled = new prehled();
+	if (ui_prehled != NULL) {
 		ui_prehled->show();
+		ui_prehled->activateWindow();
 	}
+	else {
+		ui_prehled = new prehled();
+		if (ui_prehled != NULL) {
+			ui_prehled->show();
+			connect(ui_prehled, SIGNAL(windowClosing(void*)), this, SLOT(closePrehled(void*)));
+		}
+	}
+}
+void window_control::closePrehled(void*)
+{
+	ui_prehled->close();
+	delete ui_prehled;
+	ui_prehled = NULL;
 }
 
 
