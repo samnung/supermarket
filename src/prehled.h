@@ -4,26 +4,27 @@
 #include <QWidget>
 
 namespace Ui {
-	class prehled;
+    class prehled;
 }
 
 class prehled : public QWidget
 {
-	Q_OBJECT
+    Q_OBJECT
 
 public:
-	explicit prehled(QWidget *parent = 0);
-	~prehled();
-	virtual void closeEvent(QCloseEvent *e)
-	{
-	   emit windowClosing(this);
-	}
+    explicit prehled(QWidget *parent = 0);
+    ~prehled();
+    virtual void closeEvent(QCloseEvent *e)
+    {
+       emit windowClosing(this);
+       QWidget::closeEvent(e);
+    }
 
 private:
-	Ui::prehled *ui_prehled;
+    Ui::prehled *ui_prehled;
 
 signals:
-	void windowClosing(void*);
+    void windowClosing(void*);
 
 };
 
