@@ -512,6 +512,7 @@ border-color: rgb(0, 0, 0);</string>
     <property name="title">
      <string>Nápověda</string>
     </property>
+    <addaction name="action_check_for_update"/>
     <addaction name="action_go_home"/>
     <addaction name="separator"/>
     <addaction name="actionO_Qt"/>
@@ -595,6 +596,11 @@ border-color: rgb(0, 0, 0);</string>
   <action name="actionCen_k">
    <property name="text">
     <string>Ceník</string>
+   </property>
+  </action>
+  <action name="action_check_for_update">
+   <property name="text">
+    <string>Zkontrolovat aktualizace</string>
    </property>
   </action>
  </widget>

@@ -2,14 +2,13 @@
 #define DEFINE_H
 
 #define APP_NAME "Supermarket"
-#define APP_VERSION_INT 000201
-#define APP_VERSION_STRING "0.2.1beta"
+#define APP_VERSION_INT 300
+#define APP_VERSION_STRING "0.3b"
 #define APP_CREATOR "Roman Kříž"
-
-#define APP_WINDOW_MAX 10
 
 #define APP_MAIL "samnung@gmail.com"
 #define APP_WWW "https://code.google.com/p/supermarket-app"
+#define WEB_ACTUAL "http://pokus-samnung.wz.cz/supermarket/actual_version.xml"
 
 #define FILE_XML_ACTUAL_NAME "actual.xml"
 #define FILE_XML_DATABASE "database-20110630.xml"
@@ -76,37 +75,43 @@
 
 #include <QNetworkReply>
 #include <QList>
+#include <QIODevice>
+#include <QTemporaryFile>
+#include <QRegExp>
+#include <QtXml/QDomDocument>
+#include <QtXml/QDomNode>
+#include <QDebug>
 
 
 struct FRAME_WIDGET
 {
-    QGridLayout *layout;
+	QGridLayout *layout;
 
-    QLabel *title;
-    QLabel *subtitle_left;
-    QLabel *subtitle_right;
+	QLabel *title;
+	QLabel *subtitle_left;
+	QLabel *subtitle_right;
 
-    QLabel *value[10];
-    QLabel *text[10];
-    QFrame *line[12];
-    bool *showed[10];
+	QLabel *value[10];
+	QLabel *text[10];
+	QFrame *line[12];
+	bool *showed[10];
 };
 
 struct FRAME
 {
-    QString text[10];
-    double value[10];
-    bool has_value[10];
-    int count;
+	QString text[10];
+	double value[10];
+	bool has_value[10];
+	int count;
 };
 
 struct MIX
 {
-    FRAME frame[7];
-    QString mix_type;
-    QString mix_type_styleSheet;
-    double price[3];
-    double PA;
+	FRAME frame[7];
+	QString mix_type;
+	QString mix_type_styleSheet;
+	double price[3];
+	double PA;
 };
 
 #endif

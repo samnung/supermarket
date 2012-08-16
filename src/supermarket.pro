@@ -1,16 +1,19 @@
 # !!! UTF-8 !!!
 #-------------------------------------------------
 #
-# Projekt Supermarket, kalkulačka pro Supermarket
-# fondů od společnosti Pioneer Investments.
+# Projekt Supermarket, kalkulačka pro Supermarket fondů od společnosti Pioneer Investments.
 #
 #-------------------------------------------------
 
-QT		+= core gui network
+QT		+= core gui network xml
 
 TARGET		= Supermarket
 
 TEMPLATE	= app
+
+debug {
+	CONFIG += console
+}
 
 HEADERS += \
 	splashscreen.h \
@@ -25,7 +28,9 @@ HEADERS += \
 	define.h \
 	MyQToolButton.h \
 	cenik.h \
-    SMainWindow.h
+    SMainWindow.h \
+    supdate.h \
+    sdownload.h
 
 SOURCES	+= \
 	splashscreen.cpp \
@@ -38,17 +43,14 @@ SOURCES	+= \
 	podrobnosti_adv.cpp \
 	window_control.cpp \
 	files_control.cpp \
-	cenik.cpp
+	cenik.cpp \
+    supdate.cpp \
+    sdownload.cpp
 
 FORMS	+= \
 	prehled.ui \
-	mainwindow.ui
-
-debug {
-	CONFIG += console
-}
-
-
+	mainwindow.ui \
+    updateAlert.ui
 
 macx {
 
