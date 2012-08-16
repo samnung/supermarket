@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <application>
+		<int>000200</int>
+		<path>http://pokus-samnung.wz.cz/supermarket/actual.xml</path>
+	</application>
+    <version type="database_png">20110630</version>
+    <version type="database_xml">20110630</version>
+</database>
