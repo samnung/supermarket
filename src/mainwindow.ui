@@ -28,6 +28,9 @@
   <property name="styleSheet">
    <string notr="true"/>
   </property>
+  <property name="locale">
+   <locale language="Czech" country="CzechRepublic"/>
+  </property>
   <property name="iconSize">
    <size>
     <width>24</width>
@@ -294,12 +297,24 @@
         <height>20</height>
        </size>
       </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-border-color: rgb(0, 0, 0);</string>
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
       </property>
       <property name="text">
        <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="resource.qrc">
+        <normaloff>:/img/info.png</normaloff>:/img/info.png</iconset>
+      </property>
+      <property name="popupMode">
+       <enum>QToolButton::InstantPopup</enum>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonIconOnly</enum>
       </property>
      </widget>
     </item>
@@ -328,15 +343,6 @@ border-color: rgb(0, 0, 0);</string>
       </property>
       <property name="inputMethodHints">
        <set>Qt::ImhNone</set>
-      </property>
-      <property name="inputMask">
-       <string/>
-      </property>
-      <property name="maxLength">
-       <number>32767</number>
-      </property>
-      <property name="frame">
-       <bool>true</bool>
       </property>
      </widget>
     </item>
@@ -605,6 +611,17 @@ border-color: rgb(0, 0, 0);</string>
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <tabstops>
+  <tabstop>pv_line</tabstop>
+  <tabstop>t_line</tabstop>
+  <tabstop>r_combo</tabstop>
+  <tabstop>otaznik_button</tabstop>
+  <tabstop>r_line</tabstop>
+  <tabstop>poplatek_check</tabstop>
+  <tabstop>poplatek_line</tabstop>
+ </tabstops>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
  <connections/>
 </ui>

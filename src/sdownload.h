@@ -9,17 +9,23 @@ class SDownload : public QObject
 public:
 	explicit SDownload(const QUrl &url);
 	~SDownload() {}
+	void start();
+
 private:
 	QNetworkAccessManager  *manager;
 	QNetworkRequest request;
-	QTemporaryFile *file;
+	QByteArray *file;
+	bool downloaded;
+
 signals:
-	void downloadFinished(QTemporaryFile *);
+	void downloadFinished(QByteArray *);
 	void downloadProgress(qint64,qint64);
 
 private slots:
 	void _downloadFinished(QNetworkReply *);
 	void _downloadProgress(qint64,qint64);
+public slots:
+	void _timer();
 
 };
 

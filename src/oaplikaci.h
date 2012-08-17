@@ -13,7 +13,7 @@ class oAplikaci : public QWidget
 	Q_OBJECT
 
 public:
-	explicit	oAplikaci(files_control *_files);
+	explicit	oAplikaci();
 				~oAplikaci();
 
 private:

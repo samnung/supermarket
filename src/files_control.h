@@ -2,6 +2,7 @@
 #define FILES_CONTROL_H
 
 #include "define.h"
+#include "supdate.h"
 
 class files_control : QObject
 {
@@ -14,9 +15,7 @@ public:
 		Path methods - vrací cestu k náležitým souborům
 	*/
 	QString pathMixDetails(int a)		{ return (dir_resources->path() + QDir::separator() + *xml_name_dir_database_png + QDir::separator() + *xml_mixs_name[a]); }
-	QString pathImageSplash()			{ return (dir_resources->path() + QDir::separator() + *xml_name_splash_image); }
-	QString pathImageInfo()				{ return (dir_resources->path() + QDir::separator() + *xml_name_info_icon); }
-	QString pathImageIcon()				{ return (dir_resources->path() + QDir::separator() + *xml_name_app_icon); }
+
 
 	/*
 		Date methods - vrací datum aktuality mixu
@@ -53,7 +52,7 @@ public:
 		Converse methods - metody pro konverzi QXMLStreamAttributes na řetěze a
 	*/
 	QString a2qstr(QXmlStreamAttributes *att, QString str)	{ return QStringRef(att->value(str)).toString(); }
-	int a2int(QXmlStreamAttributes *att, QString str)		{ return QString(QStringRef(att->value(str)).toString()).toInt(); }
+	int a2int(QXmlStreamAttributes *att, QString str)		{ return a2qstr(att,str).toInt(); }
 
 
 	/*
@@ -67,12 +66,14 @@ public:
 	void dataToLabels(FRAME_WIDGET *frame[], int int_mix);
 	void pricesToLabels(int mix, QLabel *label_1, QLabel *label_2, QLabel *label_3);
 
+
+	void checkForUpdate(int type);
+
 protected:
 	void	hideEmptyLabels(FRAME_WIDGET *frame[], int int_mix, int a);
 
 
-//	QDir	*dir_work;
-//	QDir	*dir_apps;
+
 	QDir	*dir_resources;
 
 	QFile	*file_actual;
@@ -89,9 +90,6 @@ protected:
 	int *xml_version_dat_xml;
 
 	QString *xml_name_database;
-	QString *xml_name_splash_image;
-	QString *xml_name_info_icon;
-	QString *xml_name_app_icon;
 	QString *xml_name_dir_database_png;
 	QString *xml_name_database_date;
 
@@ -99,11 +97,7 @@ protected:
 	int actual_mix;
 
 	MIX mix[13];
-	QNetworkReply *reply;
-
-	void downloadFile(const QString *url, const QString *file);
-protected slots:
-	void finished();
+	SUpdate update;
 };
 
 

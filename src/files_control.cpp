@@ -15,9 +15,6 @@ files_control::files_control()
 	xml_actual = new QXmlStreamReader(file_actual);
 
 
-	xml_name_splash_image = new QString;
-	xml_name_info_icon = new QString;
-	xml_name_app_icon = new QString;
 	xml_name_dir_database_png = new QString;
 	xml_name_database_date = new QString;
 
@@ -46,19 +43,6 @@ files_control::files_control()
 	}
 }
 
-//bool files_control::checkWorkFolder()
-//{
-//	if(!dir_work->exists())
-//	{
-//		if(!dir_apps->mkdir(APP_NAME))
-//		{
-//			QMessageBox::warning(NULL, APP_NAME, "Nelze vytvorit slozku pro ukladani dat");
-//			return false;
-//		}
-//	}
-//	return true;
-//}
-
 void files_control::loadActual()
 {
 	if(file_actual->open(QFile::ReadOnly))
@@ -81,21 +65,6 @@ void files_control::loadActual()
 				else if (a2qstr(xml_actual_atrrs, "type") == "database_xml")
 				{
 					*xml_version_dat_xml = QString(xml_actual->readElementText()).toInt();
-				}
-			}
-			else if (xml_actual->name() == "img")
-			{
-				if (a2qstr(xml_actual_atrrs, "type") == "splash")
-				{
-					*xml_name_splash_image = xml_actual->readElementText();
-				}
-				else if (a2qstr(xml_actual_atrrs, "type") == "app_icon")
-				{
-					*xml_name_app_icon = xml_actual->readElementText();
-				}
-				else if (a2qstr(xml_actual_atrrs, "type") == "info_icon")
-				{
-					*xml_name_info_icon = xml_actual->readElementText();
 				}
 			}
 			else if (xml_actual->name() == "name")
@@ -268,11 +237,7 @@ void files_control::pricesToLabels(int mix, QLabel *label_1, QLabel *label_2, QL
 	label_3->setText(QString("%L1").arg(this->mix[mix].price[2], 0, 'f', 2) + QString("%"));
 }
 
-void files_control::downloadFile(const QString *url, const QString *file)
+void files_control::checkForUpdate(int type)
 {
-	QUrl url_(*url);
-	QNetworkAccessManager *manager = new QNetworkAccessManager;
-	QNetworkRequest request(url_);
-	reply = manager->get(request);
-	connect(reply, SIGNAL(finished()), SLOT(finished()));
+	update.checkForUpdate(type);
 }

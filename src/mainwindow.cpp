@@ -47,7 +47,7 @@ MainWindow::MainWindow(files_control *files) : /*QMainWindow(parent) , */ui(new 
 
 	this->setWindowTitle(APP_NAME);
 
-	this->ui->otaznik_button->setIcon(QIcon(QPixmap(files->pathImageInfo())));
+	this->ui->otaznik_button->setIcon(QIcon(QPixmap(":/img/info.png")));
 }
 
 MainWindow::~MainWindow()

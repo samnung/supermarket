@@ -2,7 +2,7 @@
 #define DEFINE_H
 
 #define APP_NAME "Supermarket"
-#define APP_VERSION_INT 300
+#define APP_VERSION_INT 200
 #define APP_VERSION_STRING "0.3b"
 #define APP_CREATOR "Roman Kříž"
 
@@ -81,6 +81,7 @@
 #include <QtXml/QDomDocument>
 #include <QtXml/QDomNode>
 #include <QDebug>
+#include <QtWebKit/QWebView>
 
 
 struct FRAME_WIDGET
@@ -113,5 +114,7 @@ struct MIX
 	double price[3];
 	double PA;
 };
+
+enum normal_force { NORMAL, FORCE };
 
 #endif

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>657</width>
-    <height>336</height>
+    <width>639</width>
+    <height>399</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -26,7 +26,7 @@
       <string notr="true">font-weight: bold;</string>
      </property>
      <property name="text">
-      <string>Je dostupná nová verze aplikace %1$@! </string>
+      <string>Je dostupná nová verze aplikace Supermarket! </string>
      </property>
     </widget>
    </item>
@@ -36,20 +36,35 @@
       <bool>true</bool>
      </property>
      <property name="sizePolicy">
-      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-       <horstretch>1</horstretch>
-       <verstretch>1</verstretch>
+      <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
       </sizepolicy>
      </property>
+     <property name="maximumSize">
+      <size>
+       <width>75</width>
+       <height>75</height>
+      </size>
+     </property>
      <property name="text">
-      <string>Icon</string>
+      <string/>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::AutoText</enum>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="resource.qrc">:/img/icon.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
      </property>
     </widget>
    </item>
    <item row="1" column="1" colspan="4">
     <widget class="QLabel" name="text">
      <property name="text">
-      <string>Je k dispozici %1$@ %2$@ - máte %3$@. Přejete si nyní stáhnout aktualizaci?</string>
+      <string>Je k dispozici Supermarket %1 - máte %2. Přejete si nyní stáhnout aktualizaci?</string>
      </property>
     </widget>
    </item>
@@ -131,6 +146,8 @@
    <header>QtWebKit/QWebView</header>
   </customwidget>
  </customwidgets>
- <resources/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -1,9 +1,9 @@
 #include "oaplikaci.h"
 
-oAplikaci::oAplikaci(files_control *_files)
+oAplikaci::oAplikaci()
 {
 	setup();
-	icon->setPixmap(QPixmap(_files->pathImageIcon()));
+	icon->setPixmap(QPixmap(":/img/icon.png"));
 }
 
 oAplikaci::~oAplikaci()

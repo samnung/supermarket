@@ -48,9 +48,14 @@ private slots:
 
 	void goHome();
 
+	void action_checkForUpdateApp();
+
 
 public slots:
 	void showMainWindow();
+
+signals:
+	void checkForUpdateApp();
 
 };
 

@@ -24,6 +24,7 @@ void window_control::showMainWindow()
 		connect(window->ui->actionPodrobnosti_2, SIGNAL(triggered()), this, SLOT(showPodrobnostiPlus()));
 		connect(window->ui->action_go_home, SIGNAL(triggered()), this, SLOT(goHome()));
 		connect(window->ui->action_quit, SIGNAL(triggered()), qApp, SLOT(quit()));
+		connect(window->ui->action_check_for_update, SIGNAL(triggered()), this, SLOT(action_checkForUpdateApp()));
 
 		list_main_window.append(window);
 	}
@@ -44,7 +45,7 @@ void window_control::showOAplikaci()
 		ui_oaplikaci->activateWindow();
 	}
 	else {
-		ui_oaplikaci = new oAplikaci(files);
+		ui_oaplikaci = new oAplikaci();
 		if (ui_oaplikaci != NULL) {
 			ui_oaplikaci->show();
 			connect(ui_oaplikaci, SIGNAL(windowClosing(void*)), this, SLOT(closeCenik(void*)));
@@ -144,7 +145,11 @@ void window_control::goHome() // otevre webovy prohlizec s adresou
 {
 	if (!QDesktopServices::openUrl(QUrl(APP_WWW)))
 	{
-		QMessageBox::warning(NULL, APP_NAME,tr("Nepodařilo se připojit k \"%1\"; nemáte přístup k internetu, nebo špatně nastaven webový prohlížeč")
-							 .arg("https://code.google.com/p/supermarket"));
+		QMessageBox::warning(NULL , APP_NAME, tr("Nepodařilo se připojit k \"%1\"; nemáte přístup k internetu, nebo špatně nastaven webový prohlížeč").arg("https://code.google.com/p/supermarket"));
 	}
+}
+
+void window_control::action_checkForUpdateApp()
+{
+	files->checkForUpdate(FORCE);
 }

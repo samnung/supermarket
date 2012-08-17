@@ -5,7 +5,7 @@
 #
 #-------------------------------------------------
 
-QT		+= core gui network xml
+QT		+= core gui network xml webkit
 
 TARGET		= Supermarket
 
@@ -50,7 +50,9 @@ SOURCES	+= \
 FORMS	+= \
 	prehled.ui \
 	mainwindow.ui \
-    updateAlert.ui
+    updateAlert.ui \
+    updateActual.ui \
+    updateProgress.ui
 
 macx {
 
@@ -125,3 +127,6 @@ win32 {
 # okopírování příkazu "kopírování obsahu složky Resources" do fronty
 #QMAKE_EXTRA_TARGETS += RES_COMMAND
 #PRE_TARGETDEPS += $${RES_COMMAND.target}
+
+RESOURCES += \
+    resource.qrc
