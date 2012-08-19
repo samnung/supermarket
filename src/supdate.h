@@ -26,6 +26,8 @@ private:
 	int _type;
 	SDownload *download;
 
+	QString path;
+
 private slots:
 	void clickSkipVersion();
 	void clickRemindLater();
@@ -33,6 +35,7 @@ private slots:
 
 public slots:
 	void downloadedAppActual(QByteArray *);
+	void downloadedNewVersionApp(QByteArray *);
 	void checkForUpdate();
 };
 

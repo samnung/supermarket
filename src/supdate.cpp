@@ -86,8 +86,26 @@ void SUpdate::downloadedAppActual(QByteArray *file)
 	}
 }
 
+
 void SUpdate::clickInstallUpdate()
 {
+	widget_alert->close();
+	delete ui_alert;
+	widget_alert->deleteLater();
+
+	delete download;
+	download = new SDownload(QUrl(path));
+
+}
+
+void SUpdate::downloadedNewVersionApp(QByteArray *file)
+{
+	QFile newfile("supermarket-new.exe");
+	if ( newfile.open(QIODevice::WriteOnly) )
+	{
+		newfile.write(*file);
+	}
+
 
 }
 
@@ -100,5 +118,7 @@ void SUpdate::clickRemindLater()
 
 void SUpdate::clickSkipVersion()
 {
-
+	widget_alert->close();
+	delete ui_alert;
+	widget_alert->deleteLater();
 }
