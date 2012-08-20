@@ -41,6 +41,10 @@ files_control::files_control()
 			}
 		}
 	}
+#ifdef Q_WS_MAC
+	updater = new SparkleAutoUpdater(APP_APPCAST);
+	updater->checkForUpdatesInBackground();
+#endif
 }
 
 void files_control::loadActual()
@@ -239,5 +243,12 @@ void files_control::pricesToLabels(int mix, QLabel *label_1, QLabel *label_2, QL
 
 void files_control::checkForUpdate(int type)
 {
-	update.checkForUpdate(type);
+#ifdef Q_WS_MAC
+	if ( updater == NULL )
+		updater = new SparkleAutoUpdater(APP_APPCAST);
+	if ( updater )
+	{
+		updater->checkForUpdates();
+	}
+#endif
 }

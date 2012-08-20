@@ -5,7 +5,7 @@
 #
 #-------------------------------------------------
 
-QT		+= core gui network xml webkit
+QT		+= core gui xml network webkit
 
 TARGET		= Supermarket
 
@@ -28,9 +28,10 @@ HEADERS += \
 	define.h \
 	MyQToolButton.h \
 	cenik.h \
-    SMainWindow.h \
-    supdate.h \
-    sdownload.h
+	SMainWindow.h \
+	autoupdater.h
+
+
 
 SOURCES	+= \
 	splashscreen.cpp \
@@ -43,21 +44,18 @@ SOURCES	+= \
 	podrobnosti_adv.cpp \
 	window_control.cpp \
 	files_control.cpp \
-	cenik.cpp \
-    supdate.cpp \
-    sdownload.cpp
+	cenik.cpp
 
 FORMS	+= \
 	prehled.ui \
-	mainwindow.ui \
-    updateAlert.ui \
-    updateActual.ui \
-    updateProgress.ui
+	mainwindow.ui
 
 macx {
 
-	RESOURCE_PATH = ../resources
-	RESOURCE_FILES = $${RESOURCE_PATH}/
+	HEADERS += SparkleAutoUpdater.h
+	OBJECTIVE_SOURCES += SparkleAutoUpdater.mm
+
+	LIBS += -framework Sparkle -framework AppKit
 
 	# nastaveni adresy pro výstup
 	DESTDIR = ../build
@@ -68,9 +66,25 @@ macx {
 	# nastavení .plist souboru (informace o aplikaci)
 	QMAKE_INFO_PLIST = ../mac/Info.plist
 
+	RESOURCE_PATH = ../resources
+	RESOURCE_FILES = $${RESOURCE_PATH}/*
+
+	LIBS_SYSTEM_LIST = Sparkle
+	LIBS_QT_LIST = QtCore QtGui QtNetwork
+
+	FRAMEWORKS_PATH = $${DESTDIR}/$${TARGET}.app/Contents/Frameworks
+
+	QMAKE_POST_LINK += $$quote(mkdir -p $${FRAMEWORKS_PATH}$$escape_expand(\n\t))
+
+	for(FILE, LIBS_SYSTEM_LIST) {
+	    QMAKE_POST_LINK += $$quote(CpMac -r /Library/Frameworks/$${FILE}.framework $${FRAMEWORKS_PATH}$$escape_expand(\n\t))
+	}
+	for(FILE, LIBS_QT_LIST) {
+	    QMAKE_POST_LINK += $$quote(CpMac -r /Developer/QtSDK/Desktop/Qt/4.8.0/gcc/lib/$${FILE}.framework $${FRAMEWORKS_PATH}$$escape_expand(\n\t))
+	}
 
 	for(FILE, RESOURCE_FILES) {
-	    QMAKE_POST_LINK += $$quote(cp -R $${FILE} $${DESTDIR}/$${TARGET}.app/Contents/Resources$$escape_expand(\n\t))
+	    QMAKE_POST_LINK += $$quote(CpMac -r $${FILE} $${DESTDIR}/$${TARGET}.app/Contents/Resources$$escape_expand(\n\t))
 	}
 	#RES_COMMAND.commands += "cp resources/*.* $${DESTDIR}/$${TARGET}.app/Contents/Resources/"
 	#RES_COMMAND.target = $${DESTDIR}/$${TARGET}.app/Contents/Resources
@@ -130,3 +144,4 @@ win32 {
 
 RESOURCES += \
     resource.qrc
+

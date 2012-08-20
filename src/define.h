@@ -8,7 +8,7 @@
 
 #define APP_MAIL "samnung@gmail.com"
 #define APP_WWW "https://code.google.com/p/supermarket-app"
-#define WEB_ACTUAL "http://pokus-samnung.wz.cz/supermarket/actual_version.xml"
+#define APP_APPCAST "http://pokus-samnung.wz.cz/supermarket/appcast.xml"
 
 #define FILE_XML_ACTUAL_NAME "actual.xml"
 #define FILE_XML_DATABASE "database-20110630.xml"

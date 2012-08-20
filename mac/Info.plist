@@ -2,19 +2,27 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleDevelopmentRegion</key>
+		<string>Czech</string>
 	<key>CFBundleIconFile</key>
-	<string>icon.icns</string>
+		<string>icon.icns</string>
 	<key>CFBundlePackageType</key>
-	<string>APPL</string>
+		<string>APPL</string>
 	<key>CFBundleSignature</key>
-	<string>????</string>
+		<string>????</string>
 	<key>CFBundleExecutable</key>
-	<string>Supermarket</string>
+		<string>Supermarket</string>
 	<key>CFBundleInfoDictionaryVersion</key>
-	<string>6.0</string>
+		<string>6.0</string>
 	<key>CFBundleIdentifier</key>
-	<string>cz.samnung.Supermarket</string>
+		<string>cz.samnung.Supermarket</string>
 	<key>CFBundleVersion</key>
-	<string>0.3</string>
+		<string>0.3</string>
+	<key>SUFeedURL</key>
+		<string>http://pokus-samnung.wz.cz/supermarket/appcast.xml</string>
+	<key>SUPublicDSAKeyFile</key>
+		<string>dsa_pub.pem</string>
+	<key>SUEnableAutomaticChecks</key>
+		<true/>
 </dict>
 </plist>

@@ -2,7 +2,10 @@
 #define FILES_CONTROL_H
 
 #include "define.h"
-#include "supdate.h"
+
+#ifdef Q_WS_MAC
+	#include "SparkleAutoUpdater.h"
+#endif
 
 class files_control : QObject
 {
@@ -25,11 +28,11 @@ public:
 	/*
 		Font methods - vrací QFont nastavený pro určitý typ textu
 	*/
-	QFont fontFrameTitle()				{ return QFont(QString("Arial"), 12); }
-	QFont fontFrameText()				{ return QFont(QString("Arial"), 10); }
-	QFont fontFrameSubtitle()			{ QFont font(QString("Arial"), 10); font.setBold(true); return font; }
-	QFont fontTitleDate()				{ return QFont(QString("Arial"), 12); }
-	QFont fontTitleMix()				{ QFont font(QString("Arial Black"), 15); font.setBold(true); font.setWeight(75); return font;}
+	QFont fontFrameTitle()				{ return QFont("Arial", 12); }
+	QFont fontFrameText()				{ return QFont("Arial", 10); }
+	QFont fontFrameSubtitle()			{ QFont font("Arial", 10); font.setBold(true); return font; }
+	QFont fontTitleDate()				{ return QFont("Arial", 12); }
+	QFont fontTitleMix()				{ QFont font("Arial Black", 15); font.setBold(true); font.setWeight(75); return font;}
 
 
 	/*
@@ -97,7 +100,8 @@ protected:
 	int actual_mix;
 
 	MIX mix[13];
-	SUpdate update;
+
+	AutoUpdater *updater;
 };
 
 

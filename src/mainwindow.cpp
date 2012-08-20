@@ -85,6 +85,7 @@ void MainWindow::rLineVlastniSelected(int a)
 
 void MainWindow::setR(QString a) //prevede z QStringu a dosadi do registru R
 {
+	a.replace(QRegExp(QString::fromUtf8(" | |Kč")), "");
 	*R = a.toDouble();
 	emit anyValueChanged();
 }
@@ -95,10 +96,10 @@ void MainWindow::setR(double a) // dosadi do registru R
 	emit anyValueChanged();
 }
 
-void MainWindow::setPV(QString a) //prevede z QStringu a dosadi do registru PV
+void MainWindow::setPV(QString a) //prevede z QStringu a dosadi do registru PV (investiční částka)
 {
-	*PV = a.toInt();
-	//ui->pv_line->setText(QString("%L1").arg(a.toInt()));
+	a.replace(QRegExp(QString::fromUtf8(" | |Kč")), "");
+	*PV = a.toDouble();
 	emit anyValueChanged();
 }
 
